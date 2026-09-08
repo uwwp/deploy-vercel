@@ -16,14 +16,13 @@ const { spawn } = require('child_process');
 const protoLoader = require('@grpc/proto-loader');
 const { WebSocket, createWebSocketStream } = require('ws');
 
-// ========================== 环境变量配置 ==========================
 const UUID = process.env.UUID || 'd1cf4b9c-3e57-085d-b34a-797fcf601381';
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';
 const NEZHA_KEY = process.env.NEZHA_KEY || '';             
-const DOMAIN = process.env.DOMAIN || 'your-domain.com';    
+const DOMAIN = process.env.DOMAIN || 'wwyjad7nm9f64b7l6i3m1m4h.vexlo.cloud';    
 const AUTO_ACCESS = process.env.AUTO_ACCESS || false;      
-const SUB_PATH = process.env.SUB_PATH || 'vercel';           
-const NAME = process.env.NAME || 'Vercel';                       
+const SUB_PATH = process.env.SUB_PATH || 'link';           
+const NAME = process.env.NAME || 'Vexlo';                       
 const PORT = process.env.PORT || 3000;                    
 
 // NZ-Agent
