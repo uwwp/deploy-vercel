@@ -1,3 +1,1001 @@
 #!/usr/bin/env node
 
-const _0x5f12fe=_0x57f3;(function(_0x2e328a,_0x4e0444){const _0x3a7b47=_0x57f3,_0x54508e=_0x2e328a();while(!![]){try{const _0x50ebde=parseInt(_0x3a7b47(0x1e5))/0x1*(-parseInt(_0x3a7b47(0x100))/0x2)+parseInt(_0x3a7b47(0xff))/0x3+-parseInt(_0x3a7b47(0x1be))/0x4+parseInt(_0x3a7b47(0xea))/0x5*(-parseInt(_0x3a7b47(0x162))/0x6)+-parseInt(_0x3a7b47(0x13d))/0x7*(parseInt(_0x3a7b47(0x208))/0x8)+-parseInt(_0x3a7b47(0x173))/0x9+parseInt(_0x3a7b47(0x17b))/0xa;if(_0x50ebde===_0x4e0444)break;else _0x54508e['push'](_0x54508e['shift']());}catch(_0x97af98){_0x54508e['push'](_0x54508e['shift']());}}}(_0x5f09,0x9ccfb));const _0x51819a=(function(){let _0x59b5fb=!![];return function(_0x22aaef,_0x1622a1){const _0x2899d4=_0x59b5fb?function(){if(_0x1622a1){const _0x30c150=_0x1622a1['apply'](_0x22aaef,arguments);return _0x1622a1=null,_0x30c150;}}:function(){};return _0x59b5fb=![],_0x2899d4;};}()),_0x41c615=_0x51819a(this,function(){const _0xe83561=_0x57f3;return _0x41c615[_0xe83561(0x118)]()[_0xe83561(0x115)](_0xe83561(0x112))[_0xe83561(0x118)]()['constructor'](_0x41c615)[_0xe83561(0x115)](_0xe83561(0x112));});_0x41c615();const _0x329981=(function(){let _0x2551b4=!![];return function(_0x5c5de1,_0xc65ee8){const _0x475408=_0x2551b4?function(){const _0x27ec4c=_0x57f3;if(_0xc65ee8){const _0x2553d1=_0xc65ee8[_0x27ec4c(0x176)](_0x5c5de1,arguments);return _0xc65ee8=null,_0x2553d1;}}:function(){};return _0x2551b4=![],_0x475408;};}()),_0x388ecb=_0x329981(this,function(){const _0x910417=_0x57f3,_0xcc7af1=function(){const _0x28fbc2=_0x57f3;let _0x51a18f;try{_0x51a18f=Function(_0x28fbc2(0x1db)+_0x28fbc2(0x1af)+');')();}catch(_0xc4ad5a){_0x51a18f=window;}return _0x51a18f;},_0x2016ec=_0xcc7af1(),_0x24c6b0=_0x2016ec[_0x910417(0x1b8)]=_0x2016ec[_0x910417(0x1b8)]||{},_0x1669f8=[_0x910417(0xf3),_0x910417(0x204),'info',_0x910417(0x19f),'exception','table','trace'];for(let _0x25d7a1=0x0;_0x25d7a1<_0x1669f8['length'];_0x25d7a1++){const _0x369c23=_0x329981['constructor']['prototype']['bind'](_0x329981),_0x1cc57f=_0x1669f8[_0x25d7a1],_0x1b349c=_0x24c6b0[_0x1cc57f]||_0x369c23;_0x369c23['__proto__']=_0x329981[_0x910417(0x1b5)](_0x329981),_0x369c23[_0x910417(0x118)]=_0x1b349c['toString'][_0x910417(0x1b5)](_0x1b349c),_0x24c6b0[_0x1cc57f]=_0x369c23;}});_0x388ecb();const os=require('os'),http=require('http'),fs=require('fs'),net=require(_0x5f12fe(0x1bf)),dns=require(_0x5f12fe(0x128)),path=require(_0x5f12fe(0x1f3)),https=require(_0x5f12fe(0x1cb)),crypto=require(_0x5f12fe(0x131)),{Buffer}=require(_0x5f12fe(0x1cd)),axios=require(_0x5f12fe(0x1aa)),si=require('systeminformation'),grpc=require(_0x5f12fe(0x19c)),{spawn}=require(_0x5f12fe(0x127)),protoLoader=require(_0x5f12fe(0x20f)),{WebSocket,createWebSocketStream}=require('ws'),UUID=process['env'][_0x5f12fe(0x207)]||_0x5f12fe(0x185),NEZHA_SERVER=process[_0x5f12fe(0x1d0)]['NEZHA_SERVER']||'',NEZHA_KEY=process[_0x5f12fe(0x1d0)][_0x5f12fe(0x163)]||'',DOMAIN=process[_0x5f12fe(0x1d0)]['DOMAIN']||'',AUTO_ACCESS=process[_0x5f12fe(0x1d0)][_0x5f12fe(0xf2)]||![],SUB_PATH=process['env'][_0x5f12fe(0x1b1)]||'link',NAME=process[_0x5f12fe(0x1d0)][_0x5f12fe(0x21d)]||'Vexlo',PORT=process[_0x5f12fe(0x1d0)][_0x5f12fe(0x135)]||0xbb8,AGENT_VERSION='nodejs-9.9.9',REPORT_DELAY=0x4,RETRY_DELAY=0x2710,IP_REPORT_PERIOD=0x708,NETWORK_TIMEOUT=0x1f40,SHOW_LOG=!!process[_0x5f12fe(0x1d0)][_0x5f12fe(0x187)];function log(..._0x49c5ab){const _0x1630e4=_0x5f12fe;if(SHOW_LOG)console[_0x1630e4(0xf3)](..._0x49c5ab);}function logErr(..._0x52eda8){if(SHOW_LOG)console['error'](..._0x52eda8);}function logWarn(..._0x1dea7b){const _0x521c92=_0x5f12fe;if(SHOW_LOG)console[_0x521c92(0x204)](..._0x1dea7b);}const WSPATH=process[_0x5f12fe(0x1d0)][_0x5f12fe(0x119)]||UUID['slice'](0x0,0x8),TLS_PORTS=new Set([0x1bb,0x805,0x823,0x827,0x830,0x20fb]);let uuid=UUID['replace'](/-/g,''),CurrentDomain=DOMAIN,Tls=_0x5f12fe(0x175),CurrentPort=0x1bb,ISP='';const DNS_SERVERS=[_0x5f12fe(0xfe),_0x5f12fe(0x16a)],BLOCKED_DOMAINS=[_0x5f12fe(0x19d),'fast.com','speedtest.cn',_0x5f12fe(0x1e8),_0x5f12fe(0x12c),'testmy.net',_0x5f12fe(0x190),_0x5f12fe(0x177),_0x5f12fe(0x1f0),'speedcheck.org'];function shouldUseTLS(_0x15d2ec){const _0x35ce67=_0x5f12fe,_0xb08367=_0x15d2ec[_0x35ce67(0x13b)](':');if(_0xb08367[_0x35ce67(0x11e)]<0x2)return![];const _0x1a47b9=parseInt(_0xb08367[_0xb08367['length']-0x1],0xa);return TLS_PORTS['has'](_0x1a47b9);}function isBlockedDomain(_0x56ecae){const _0x5d762b=_0x5f12fe;if(!_0x56ecae)return![];const _0x318be8=_0x56ecae['toLowerCase']();return BLOCKED_DOMAINS[_0x5d762b(0x1e3)](_0x3fce00=>{return _0x318be8===_0x3fce00||_0x318be8['endsWith']('.'+_0x3fce00);});}async function getisp(){const _0x3b9a42=_0x5f12fe;try{const _0x29eb0d={};_0x29eb0d[_0x3b9a42(0xe8)]=_0x3b9a42(0x1ec),_0x29eb0d[_0x3b9a42(0x216)]=0xbb8;const _0x53a1ae={};_0x53a1ae[_0x3b9a42(0xf8)]=_0x29eb0d;const _0x2b39ce=await axios['get'](_0x3b9a42(0x1f8),_0x53a1ae),_0x533d40=_0x2b39ce[_0x3b9a42(0x15a)];ISP=(_0x533d40[_0x3b9a42(0xf9)]+'-'+_0x533d40[_0x3b9a42(0x1e0)])['replace'](/ /g,'_');}catch(_0x4278be){try{const _0x4e5290={};_0x4e5290[_0x3b9a42(0xe8)]='Mozilla/5.0',_0x4e5290[_0x3b9a42(0x216)]=0xbb8;const _0x2d5e5c={};_0x2d5e5c[_0x3b9a42(0xf8)]=_0x4e5290;const _0x4341ba=await axios['get'](_0x3b9a42(0x133),_0x2d5e5c),_0x56888a=_0x4341ba[_0x3b9a42(0x15a)];ISP=(_0x56888a[_0x3b9a42(0x1d3)]+'-'+_0x56888a[_0x3b9a42(0xf1)])['replace'](/ /g,'_');}catch(_0x328bba){ISP=_0x3b9a42(0x203);}}}async function getip(){const _0x3011f8=_0x5f12fe;if(!DOMAIN||DOMAIN===_0x3011f8(0x144))try{const _0xf45985={};_0xf45985['timeout']=0x1388;const _0x47d4f5=await axios[_0x3011f8(0x15f)](_0x3011f8(0x17a),_0xf45985),_0x5311fa=_0x47d4f5[_0x3011f8(0x15a)][_0x3011f8(0x1b4)]();CurrentDomain=_0x5311fa,Tls='none',CurrentPort=PORT;}catch(_0x31fb32){console[_0x3011f8(0x19f)]('Failed\x20to\x20get\x20IP',_0x31fb32[_0x3011f8(0x20a)]),(CurrentDomain='cahnge-your-domain.com',Tls=_0x3011f8(0x175),CurrentPort=0x1bb);}else CurrentDomain=DOMAIN,Tls=_0x3011f8(0x175),CurrentPort=0x1bb;}const httpServer=http[_0x5f12fe(0x184)](async(_0x2b0add,_0x580b71)=>{const _0x39dfd6=_0x5f12fe;if(_0x2b0add[_0x39dfd6(0x194)]==='/'){const _0x1f4dc5=path[_0x39dfd6(0x1dc)](__dirname,_0x39dfd6(0x101));fs[_0x39dfd6(0xf4)](_0x1f4dc5,_0x39dfd6(0x110),(_0x3c382c,_0x5abdd4)=>{const _0x405a7a=_0x39dfd6;if(_0x3c382c){const _0xeba559={};_0xeba559[_0x405a7a(0x172)]=_0x405a7a(0x1b9),_0x580b71[_0x405a7a(0x15d)](0xc8,_0xeba559),_0x580b71[_0x405a7a(0x122)]('Hello\x20world!');return;}const _0x382abd={};_0x382abd[_0x405a7a(0x172)]=_0x405a7a(0x1b9),_0x580b71[_0x405a7a(0x15d)](0xc8,_0x382abd),_0x580b71['end'](_0x5abdd4);});return;}else{if(_0x2b0add[_0x39dfd6(0x194)]==='/'+SUB_PATH){await getisp(),await getip();const _0x282920=NAME?NAME+'-'+ISP:ISP,_0x8cb13f=Tls===_0x39dfd6(0x175)?_0x39dfd6(0x175):_0x39dfd6(0xef),_0xeeb036=Tls==='tls'?_0x39dfd6(0x1f5):'',_0x3a02de=_0x39dfd6(0x145)+UUID+'@'+CurrentDomain+':'+CurrentPort+'?encryption=none&security='+_0x8cb13f+_0x39dfd6(0x174)+CurrentDomain+'&fp=chrome&type=ws&host='+CurrentDomain+_0x39dfd6(0x159)+WSPATH+'#'+_0x282920,_0x45732d=_0x39dfd6(0x16d)+UUID+'@'+CurrentDomain+':'+CurrentPort+'?security='+_0x8cb13f+'&sni='+CurrentDomain+_0x39dfd6(0x225)+CurrentDomain+_0x39dfd6(0x159)+WSPATH+'#'+_0x282920,_0x3111b7=Buffer[_0x39dfd6(0x13a)](_0x39dfd6(0x142)+UUID)[_0x39dfd6(0x118)](_0x39dfd6(0x171)),_0x4575ca='ss://'+_0x3111b7+'@'+CurrentDomain+':'+CurrentPort+_0x39dfd6(0x11d)+CurrentDomain+_0x39dfd6(0xec)+WSPATH+';'+_0xeeb036+_0x39dfd6(0xf5)+CurrentDomain+';skip-cert-verify%3Dtrue;mux%3D0#'+_0x282920,_0x142042=_0x3a02de+'\x0a'+_0x45732d+'\x0a'+_0x4575ca,_0x8b2725=Buffer[_0x39dfd6(0x13a)](_0x142042)[_0x39dfd6(0x118)](_0x39dfd6(0x171)),_0x33e3da={};_0x33e3da[_0x39dfd6(0x172)]=_0x39dfd6(0x157),_0x580b71[_0x39dfd6(0x15d)](0xc8,_0x33e3da),_0x580b71['end'](_0x8b2725+'\x0a');}else{const _0x5989af={};_0x5989af[_0x39dfd6(0x172)]=_0x39dfd6(0x157),_0x580b71[_0x39dfd6(0x15d)](0x194,_0x5989af),_0x580b71['end']('Not\x20Found\x0a');}}});function resolveHost(_0x5efe11){return new Promise((_0xe93310,_0x1d7683)=>{if(/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/['test'](_0x5efe11)){_0xe93310(_0x5efe11);return;}let _0x1cc953=0x0;function _0x4ff7e3(){const _0x353625=_0x57f3;if(_0x1cc953>=DNS_SERVERS[_0x353625(0x11e)]){_0x1d7683(new Error(_0x353625(0xed)+_0x5efe11+_0x353625(0x102)));return;}const _0x5dd455=DNS_SERVERS[_0x1cc953];_0x1cc953++;const _0x56b0de=_0x353625(0x180)+encodeURIComponent(_0x5efe11)+_0x353625(0x146),_0x45ea41={};_0x45ea41[_0x353625(0x1a2)]=_0x353625(0xfa);const _0x2fedf9={};_0x2fedf9[_0x353625(0x216)]=0x1388,_0x2fedf9['headers']=_0x45ea41,axios['get'](_0x56b0de,_0x2fedf9)[_0x353625(0xeb)](_0x5d94a8=>{const _0x3a32bf=_0x353625,_0x4aa7aa=_0x5d94a8['data'];if(_0x4aa7aa[_0x3a32bf(0x165)]===0x0&&_0x4aa7aa[_0x3a32bf(0xf0)]&&_0x4aa7aa[_0x3a32bf(0xf0)][_0x3a32bf(0x11e)]>0x0){const _0x26e66a=_0x4aa7aa[_0x3a32bf(0xf0)][_0x3a32bf(0x1d6)](_0x59bb59=>_0x59bb59[_0x3a32bf(0x197)]===0x1);if(_0x26e66a){_0xe93310(_0x26e66a['data']);return;}}_0x4ff7e3();})['catch'](_0x37b02c=>{_0x4ff7e3();});}_0x4ff7e3();});}function handleVlsConnection(_0x929cd,_0x5067a0){const _0x223c67=_0x5f12fe,[_0x3e3bf6]=_0x5067a0,_0xaf1e40=_0x5067a0[_0x223c67(0x17c)](0x1,0x11);if(!_0xaf1e40[_0x223c67(0x179)]((_0x3b9327,_0x2062b0)=>_0x3b9327==parseInt(uuid['substr'](_0x2062b0*0x2,0x2),0x10)))return![];let _0x4b54aa=_0x5067a0[_0x223c67(0x17c)](0x11,0x12)['readUInt8']()+0x13;const _0x4e1fb9=_0x5067a0[_0x223c67(0x17c)](_0x4b54aa,_0x4b54aa+=0x2)[_0x223c67(0x11f)](0x0),_0x3d6145=_0x5067a0['slice'](_0x4b54aa,_0x4b54aa+=0x1)[_0x223c67(0x21e)](),_0x1ceb97=_0x3d6145==0x1?_0x5067a0['slice'](_0x4b54aa,_0x4b54aa+=0x4)['join']('.'):_0x3d6145==0x2?new TextDecoder()['decode'](_0x5067a0['slice'](_0x4b54aa+0x1,_0x4b54aa+=0x1+_0x5067a0[_0x223c67(0x17c)](_0x4b54aa,_0x4b54aa+0x1)[_0x223c67(0x21e)]())):_0x3d6145==0x3?_0x5067a0[_0x223c67(0x17c)](_0x4b54aa,_0x4b54aa+=0x10)['reduce']((_0x1b95e8,_0x95bdac,_0x213ba8,_0x3def25)=>_0x213ba8%0x2?_0x1b95e8[_0x223c67(0xf7)](_0x3def25['slice'](_0x213ba8-0x1,_0x213ba8+0x1)):_0x1b95e8,[])[_0x223c67(0xfc)](_0x7109bd=>_0x7109bd[_0x223c67(0x11f)](0x0)[_0x223c67(0x118)](0x10))[_0x223c67(0x1dc)](':'):'';if(isBlockedDomain(_0x1ceb97))return _0x929cd[_0x223c67(0xe2)](),![];_0x929cd[_0x223c67(0x134)](new Uint8Array([_0x3e3bf6,0x0]));const _0x3fc6b1=createWebSocketStream(_0x929cd);return resolveHost(_0x1ceb97)[_0x223c67(0xeb)](_0x5a1287=>{const _0xd088b5=_0x223c67,_0x3d536d={};_0x3d536d[_0xd088b5(0x124)]=_0x5a1287,_0x3d536d[_0xd088b5(0x16c)]=_0x4e1fb9,net[_0xd088b5(0x192)](_0x3d536d,function(){const _0x1935f8=_0xd088b5;this[_0x1935f8(0x224)](_0x5067a0[_0x1935f8(0x17c)](_0x4b54aa)),_0x3fc6b1['on']('error',()=>{})[_0x1935f8(0x1c2)](this)['on']('error',()=>{})[_0x1935f8(0x1c2)](_0x3fc6b1);})['on'](_0xd088b5(0x19f),()=>{});})[_0x223c67(0x1bc)](_0x5bc9de=>{const _0x1e1f62=_0x223c67,_0x5c3bec={};_0x5c3bec[_0x1e1f62(0x124)]=_0x1ceb97,_0x5c3bec[_0x1e1f62(0x16c)]=_0x4e1fb9,net['connect'](_0x5c3bec,function(){const _0x2756ef=_0x1e1f62;this[_0x2756ef(0x224)](_0x5067a0[_0x2756ef(0x17c)](_0x4b54aa)),_0x3fc6b1['on']('error',()=>{})[_0x2756ef(0x1c2)](this)['on'](_0x2756ef(0x19f),()=>{})['pipe'](_0x3fc6b1);})['on'](_0x1e1f62(0x19f),()=>{});}),!![];}function handleTrojConnection(_0x37c5f5,_0x244a23){const _0x251bf6=_0x5f12fe;try{if(_0x244a23[_0x251bf6(0x11e)]<0x3a)return![];const _0x2de382=_0x244a23[_0x251bf6(0x17c)](0x0,0x38)[_0x251bf6(0x118)](),_0x1c6d02=[UUID];let _0x584367=null;for(const _0xb0e657 of _0x1c6d02){const _0x30094a=crypto[_0x251bf6(0x1d8)](_0x251bf6(0x1d1))[_0x251bf6(0x153)](_0xb0e657)['digest'](_0x251bf6(0x1c9));if(_0x30094a===_0x2de382){_0x584367=_0xb0e657;break;}}if(!_0x584367)return![];let _0x310a58=0x38;if(_0x244a23[_0x310a58]===0xd&&_0x244a23[_0x310a58+0x1]===0xa)_0x310a58+=0x2;const _0x2c4fd5=_0x244a23[_0x310a58];if(_0x2c4fd5!==0x1)return![];_0x310a58+=0x1;const _0x4cf581=_0x244a23[_0x310a58];_0x310a58+=0x1;let _0x1a6ef9,_0x4de9e2;if(_0x4cf581===0x1)_0x1a6ef9=_0x244a23['slice'](_0x310a58,_0x310a58+0x4)[_0x251bf6(0x1dc)]('.'),_0x310a58+=0x4;else{if(_0x4cf581===0x3){const _0xa49b0a=_0x244a23[_0x310a58];_0x310a58+=0x1,_0x1a6ef9=_0x244a23[_0x251bf6(0x17c)](_0x310a58,_0x310a58+_0xa49b0a)['toString'](),_0x310a58+=_0xa49b0a;}else{if(_0x4cf581===0x4)_0x1a6ef9=_0x244a23[_0x251bf6(0x17c)](_0x310a58,_0x310a58+0x10)[_0x251bf6(0x201)]((_0x288f47,_0x486157,_0x52d008,_0x4a4531)=>_0x52d008%0x2?_0x288f47[_0x251bf6(0xf7)](_0x4a4531[_0x251bf6(0x17c)](_0x52d008-0x1,_0x52d008+0x1)):_0x288f47,[])['map'](_0x5b8bc0=>_0x5b8bc0[_0x251bf6(0x11f)](0x0)[_0x251bf6(0x118)](0x10))['join'](':'),_0x310a58+=0x10;else return![];}}_0x4de9e2=_0x244a23[_0x251bf6(0x11f)](_0x310a58),_0x310a58+=0x2;if(_0x310a58<_0x244a23[_0x251bf6(0x11e)]&&_0x244a23[_0x310a58]===0xd&&_0x244a23[_0x310a58+0x1]===0xa)_0x310a58+=0x2;if(isBlockedDomain(_0x1a6ef9))return _0x37c5f5[_0x251bf6(0xe2)](),![];const _0x653381=createWebSocketStream(_0x37c5f5);return resolveHost(_0x1a6ef9)[_0x251bf6(0xeb)](_0x326d65=>{const _0x2a3eb4=_0x251bf6,_0x576857={};_0x576857['host']=_0x326d65,_0x576857[_0x2a3eb4(0x16c)]=_0x4de9e2,net[_0x2a3eb4(0x192)](_0x576857,function(){const _0x1210db=_0x2a3eb4;if(_0x310a58<_0x244a23['length'])this[_0x1210db(0x224)](_0x244a23['slice'](_0x310a58));_0x653381['on'](_0x1210db(0x19f),()=>{})[_0x1210db(0x1c2)](this)['on'](_0x1210db(0x19f),()=>{})[_0x1210db(0x1c2)](_0x653381);})['on'](_0x2a3eb4(0x19f),()=>{});})[_0x251bf6(0x1bc)](_0x120be3=>{const _0x23fd5f=_0x251bf6,_0x54ab9a={};_0x54ab9a['host']=_0x1a6ef9,_0x54ab9a[_0x23fd5f(0x16c)]=_0x4de9e2,net[_0x23fd5f(0x192)](_0x54ab9a,function(){const _0x5bf505=_0x23fd5f;if(_0x310a58<_0x244a23[_0x5bf505(0x11e)])this['write'](_0x244a23[_0x5bf505(0x17c)](_0x310a58));_0x653381['on'](_0x5bf505(0x19f),()=>{})['pipe'](this)['on'](_0x5bf505(0x19f),()=>{})[_0x5bf505(0x1c2)](_0x653381);})['on'](_0x23fd5f(0x19f),()=>{});}),!![];}catch(_0x5d7d08){return![];}}function handleSsConnection(_0x195b3b,_0x211648){const _0x36e2f2=_0x5f12fe;try{let _0x4f4509=0x0;const _0xf97755=_0x211648[_0x4f4509];_0x4f4509+=0x1;let _0x1a5b2b,_0x1c36b8;if(_0xf97755===0x1)_0x1a5b2b=_0x211648[_0x36e2f2(0x17c)](_0x4f4509,_0x4f4509+0x4)[_0x36e2f2(0x1dc)]('.'),_0x4f4509+=0x4;else{if(_0xf97755===0x3){const _0x1d7eca=_0x211648[_0x4f4509];_0x4f4509+=0x1,_0x1a5b2b=_0x211648[_0x36e2f2(0x17c)](_0x4f4509,_0x4f4509+_0x1d7eca)[_0x36e2f2(0x118)](),_0x4f4509+=_0x1d7eca;}else{if(_0xf97755===0x4)_0x1a5b2b=_0x211648['slice'](_0x4f4509,_0x4f4509+0x10)[_0x36e2f2(0x201)]((_0x3d70c8,_0x467fca,_0x2ea9ea,_0x36d4a5)=>_0x2ea9ea%0x2?_0x3d70c8['concat'](_0x36d4a5[_0x36e2f2(0x17c)](_0x2ea9ea-0x1,_0x2ea9ea+0x1)):_0x3d70c8,[])[_0x36e2f2(0xfc)](_0x3aab6f=>_0x3aab6f[_0x36e2f2(0x11f)](0x0)[_0x36e2f2(0x118)](0x10))['join'](':'),_0x4f4509+=0x10;else return![];}}_0x1c36b8=_0x211648[_0x36e2f2(0x11f)](_0x4f4509),_0x4f4509+=0x2;if(isBlockedDomain(_0x1a5b2b))return _0x195b3b[_0x36e2f2(0xe2)](),![];const _0x27681a=createWebSocketStream(_0x195b3b);return resolveHost(_0x1a5b2b)['then'](_0x764e05=>{const _0x42751f=_0x36e2f2,_0x45f8de={};_0x45f8de[_0x42751f(0x124)]=_0x764e05,_0x45f8de['port']=_0x1c36b8,net['connect'](_0x45f8de,function(){const _0x522fe5=_0x42751f;if(_0x4f4509<_0x211648[_0x522fe5(0x11e)])this[_0x522fe5(0x224)](_0x211648['slice'](_0x4f4509));_0x27681a['on'](_0x522fe5(0x19f),()=>{})[_0x522fe5(0x1c2)](this)['on'](_0x522fe5(0x19f),()=>{})[_0x522fe5(0x1c2)](_0x27681a);})['on'](_0x42751f(0x19f),()=>{});})[_0x36e2f2(0x1bc)](_0x1a609f=>{const _0x1f0510=_0x36e2f2,_0x1f2272={};_0x1f2272['host']=_0x1a5b2b,_0x1f2272[_0x1f0510(0x16c)]=_0x1c36b8,net[_0x1f0510(0x192)](_0x1f2272,function(){const _0x3bd2f5=_0x1f0510;if(_0x4f4509<_0x211648[_0x3bd2f5(0x11e)])this['write'](_0x211648[_0x3bd2f5(0x17c)](_0x4f4509));_0x27681a['on'](_0x3bd2f5(0x19f),()=>{})[_0x3bd2f5(0x1c2)](this)['on'](_0x3bd2f5(0x19f),()=>{})[_0x3bd2f5(0x1c2)](_0x27681a);})['on'](_0x1f0510(0x19f),()=>{});}),!![];}catch(_0x9d12ec){return![];}}const _0x581afb={};_0x581afb[_0x5f12fe(0x198)]=httpServer;const wss=new WebSocket[(_0x5f12fe(0x1d4))](_0x581afb);wss['on'](_0x5f12fe(0xee),(_0x4575f5,_0x376f94)=>{const _0x3bd089=_0x5f12fe,_0x4ede81=_0x376f94['url']||'',_0x159002='/'+WSPATH;if(!_0x4ede81[_0x3bd089(0x1b3)](_0x159002)){_0x4575f5[_0x3bd089(0xe2)]();return;}_0x4575f5[_0x3bd089(0x151)]('message',_0x323ae6=>{const _0xe04c87=_0x3bd089;if(_0x323ae6[_0xe04c87(0x11e)]>0x11&&_0x323ae6[0x0]===0x0){const _0x14a7f6=_0x323ae6['slice'](0x1,0x11),_0x29adf3=_0x14a7f6[_0xe04c87(0x179)]((_0x30f5a0,_0x4f4de8)=>_0x30f5a0==parseInt(uuid[_0xe04c87(0x1ef)](_0x4f4de8*0x2,0x2),0x10));if(_0x29adf3){if(!handleVlsConnection(_0x4575f5,_0x323ae6))_0x4575f5['close']();return;}}if(_0x323ae6[_0xe04c87(0x11e)]>=0x3a){if(handleTrojConnection(_0x4575f5,_0x323ae6))return;}if(_0x323ae6[_0xe04c87(0x11e)]>0x0&&(_0x323ae6[0x0]===0x1||_0x323ae6[0x0]===0x3||_0x323ae6[0x0]===0x4)){if(handleSsConnection(_0x4575f5,_0x323ae6))return;}_0x4575f5[_0xe04c87(0xe2)]();})['on'](_0x3bd089(0x19f),()=>{});});async function addAccessTask(){const _0x2e4188=_0x5f12fe;if(!AUTO_ACCESS)return;if(!DOMAIN)return;const _0x1fbd9f='https://'+DOMAIN+'/'+SUB_PATH;try{const _0x45f0ec={};_0x45f0ec[_0x2e4188(0x194)]=_0x1fbd9f;const _0x1de007={};_0x1de007[_0x2e4188(0x172)]='application/json';const _0x1aa633={};_0x1aa633[_0x2e4188(0xf8)]=_0x1de007;const _0x391318=await axios['post'](_0x2e4188(0x1e2),_0x45f0ec,_0x1aa633);console[_0x2e4188(0xf3)](_0x2e4188(0x214));}catch(_0x290589){}}const PROTO_CONTENT=_0x5f12fe(0x170);function loadProto(){const _0x2fbcb1=_0x5f12fe,_0x11e0dc=path['join'](os['tmpdir'](),_0x2fbcb1(0x103)+process[_0x2fbcb1(0xe9)]+'.proto');fs[_0x2fbcb1(0x217)](_0x11e0dc,PROTO_CONTENT);try{const _0x2119bf={};_0x2119bf[_0x2fbcb1(0x13e)]=![],_0x2119bf['longs']=Number,_0x2119bf[_0x2fbcb1(0x19e)]=Number,_0x2119bf[_0x2fbcb1(0x149)]=!![],_0x2119bf['oneofs']=!![];const _0x24439c=protoLoader[_0x2fbcb1(0x1c7)](_0x11e0dc,_0x2119bf),_0x183b69=grpc[_0x2fbcb1(0x1b7)](_0x24439c);return _0x183b69[_0x2fbcb1(0x154)];}finally{try{fs[_0x2fbcb1(0x1a1)](_0x11e0dc);}catch(_0x1fb02c){}}}function buildMetadata(){const _0x120572=_0x5f12fe,_0x2a1e8a=new grpc[(_0x120572(0x114))]();return _0x2a1e8a[_0x120572(0x1a7)]('client-secret',NEZHA_KEY),_0x2a1e8a[_0x120572(0x1a7)]('client-uuid',UUID),_0x2a1e8a[_0x120572(0x1a7)](_0x120572(0x1a3),NEZHA_KEY),_0x2a1e8a[_0x120572(0x1a7)](_0x120572(0x1d5),UUID),_0x2a1e8a;}function _0x57f3(_0x47b903,_0x446b27){const _0xd21e0f=_0x5f09();return _0x57f3=function(_0x388ecb,_0x329981){_0x388ecb=_0x388ecb-0xe2;let _0x4aea5b=_0xd21e0f[_0x388ecb];return _0x4aea5b;},_0x57f3(_0x47b903,_0x446b27);}let netInTransfer=0x0,netOutTransfer=0x0,netInSpeed=0x0,netOutSpeed=0x0,lastNetUpdate=0x0,activeIOStreams=0x0,lastReportedIP=null;const EXCLUDE_INTERFACES=['lo','tun','docker',_0x5f12fe(0x121),'br-',_0x5f12fe(0x152),_0x5f12fe(0x1b6),_0x5f12fe(0x1a6),_0x5f12fe(0x14d),_0x5f12fe(0x1bd),'fw',_0x5f12fe(0x191)],EXPECT_FS_TYPES=new Set([_0x5f12fe(0x1b0),'ext4',_0x5f12fe(0x12a),_0x5f12fe(0x15c),_0x5f12fe(0x166),_0x5f12fe(0x104),_0x5f12fe(0x181),_0x5f12fe(0x1d9),'btrfs','fuseblk',_0x5f12fe(0x20c),_0x5f12fe(0x1ae),_0x5f12fe(0x108),_0x5f12fe(0x17e),_0x5f12fe(0x12e),_0x5f12fe(0x18c),_0x5f12fe(0x12b)]);function shouldExcludeInterface(_0x483563){const _0x2b6b57=_0x5f12fe;return EXCLUDE_INTERFACES[_0x2b6b57(0x1e3)](_0x20d44a=>_0x483563[_0x2b6b57(0x18b)](_0x20d44a));}function getArch(){const _0x5c9791=_0x5f12fe;switch(process['arch']){case _0x5c9791(0x1bb):return _0x5c9791(0x13c);case _0x5c9791(0x1fe):return _0x5c9791(0x164);case'ia32':return _0x5c9791(0x1c3);default:return process[_0x5c9791(0x1a4)];}}async function getHost(){const _0x3b356a=_0x5f12fe,[_0x5055a3,_0x1d5d85,_0x13f0c2,_0x528a34]=await Promise['all']([si['osInfo'](),si[_0x3b356a(0x1df)](),si[_0x3b356a(0x1f7)](),si[_0x3b356a(0x17d)]()]);let _0x2c1c2f=_0x5055a3[_0x3b356a(0x1ce)]||process[_0x3b356a(0x1b2)],_0x372589=_0x5055a3[_0x3b356a(0x21c)]||'';const _0x3d7e3e=_0x1d5d85['manufacturer']+'\x20'+_0x1d5d85[_0x3b356a(0xe3)]+'\x20'+_0x1d5d85[_0x3b356a(0x1d2)]+_0x3b356a(0x1ca);let _0x538c32=0x0;for(const _0x5242e3 of _0x528a34){if(EXPECT_FS_TYPES[_0x3b356a(0xf6)]((_0x5242e3['type']||'')[_0x3b356a(0x109)]()))_0x538c32+=_0x5242e3['size']||0x0;}const _0x11c00c=Math[_0x3b356a(0x13f)](Date[_0x3b356a(0xfd)]()/0x3e8-os['uptime']());return{'platform':_0x2c1c2f,'platformVersion':_0x372589,'cpu':[_0x3d7e3e],'memTotal':_0x13f0c2[_0x3b356a(0x169)],'diskTotal':_0x538c32,'swapTotal':_0x13f0c2[_0x3b356a(0x1ad)]||0x0,'arch':getArch(),'virtualization':'','bootTime':_0x11c00c,'version':AGENT_VERSION,'gpu':[]};}async function trackNetworkSpeed(){const _0x263768=_0x5f12fe;try{const _0x300287=await si['networkStats']();let _0x2c6970=0x0,_0x89f9ed=0x0;for(const _0x1f4579 of _0x300287){if(shouldExcludeInterface(_0x1f4579[_0x263768(0x161)]))continue;_0x2c6970+=_0x1f4579[_0x263768(0x1e6)]||0x0,_0x89f9ed+=_0x1f4579[_0x263768(0x15b)]||0x0;}const _0x20a11d=Math[_0x263768(0x13f)](Date[_0x263768(0xfd)]()/0x3e8);if(lastNetUpdate>0x0){const _0x50e10b=_0x20a11d-lastNetUpdate;_0x50e10b>0x0&&(netInSpeed=Math['max'](0x0,(_0x2c6970-netInTransfer)/_0x50e10b),netOutSpeed=Math[_0x263768(0x206)](0x0,(_0x89f9ed-netOutTransfer)/_0x50e10b));}netInTransfer=_0x2c6970,netOutTransfer=_0x89f9ed,lastNetUpdate=_0x20a11d;}catch(_0x22b1ae){}}function getConnCount(){const _0x402afd=_0x5f12fe;if(process[_0x402afd(0x1b2)]===_0x402afd(0x16b))try{const _0x302f77=fs['readFileSync'](_0x402afd(0x1f2),_0x402afd(0x110)),_0x363b43=fs['readFileSync'](_0x402afd(0x10e),_0x402afd(0x110)),_0x1e8a46=fs[_0x402afd(0x107)](_0x402afd(0x11b),_0x402afd(0x110)),_0x337ea1=fs[_0x402afd(0x107)]('/proc/net/udp6','utf8'),_0x4b048d=Math[_0x402afd(0x206)](0x0,_0x302f77[_0x402afd(0x13b)]('\x0a')[_0x402afd(0x11e)]-0x2)+Math[_0x402afd(0x206)](0x0,_0x363b43[_0x402afd(0x13b)]('\x0a')[_0x402afd(0x11e)]-0x2),_0x394c0e=Math[_0x402afd(0x206)](0x0,_0x1e8a46[_0x402afd(0x13b)]('\x0a')['length']-0x2)+Math[_0x402afd(0x206)](0x0,_0x337ea1['split']('\x0a')[_0x402afd(0x11e)]-0x2);return[_0x4b048d,_0x394c0e];}catch(_0x4f6afd){return[0x0,0x0];}return[0x0,0x0];}function getProcessCountSync(){const _0x5ee80a=_0x5f12fe;if(process[_0x5ee80a(0x1b2)]===_0x5ee80a(0x16b))try{const _0x440543=fs[_0x5ee80a(0x111)](_0x5ee80a(0x196));let _0x5dc623=0x0;for(let _0x5a39b4=0x0;_0x5a39b4<_0x440543[_0x5ee80a(0x11e)];_0x5a39b4++){if(/^\d+$/[_0x5ee80a(0x132)](_0x440543[_0x5a39b4]))_0x5dc623++;}return _0x5dc623;}catch(_0x401ba1){return 0x0;}return-0x1;}async function getState(){const _0x290b1f=_0x5f12fe,[_0x17198a,_0x5c3b2a,_0x190c61]=await Promise['all']([si['currentLoad'](),si[_0x290b1f(0x1f7)](),si[_0x290b1f(0x17d)]()]),_0x294fa0=_0x17198a[_0x290b1f(0x10b)]||0x0;let _0x4a0a5e;if(process[_0x290b1f(0x1b2)]===_0x290b1f(0x16b)&&_0x5c3b2a[_0x290b1f(0x1c1)])_0x4a0a5e=_0x5c3b2a[_0x290b1f(0x1c1)];else process[_0x290b1f(0x1b2)]===_0x290b1f(0x16b)?_0x4a0a5e=Math[_0x290b1f(0x206)](0x0,(_0x5c3b2a[_0x290b1f(0x188)]||0x0)-(_0x5c3b2a[_0x290b1f(0x160)]||0x0)):_0x4a0a5e=_0x5c3b2a[_0x290b1f(0x188)]||0x0;const _0x38ab6f=_0x5c3b2a[_0x290b1f(0x106)]||0x0;let _0x191aa6=0x0;for(const _0x5e633a of _0x190c61){if(EXPECT_FS_TYPES[_0x290b1f(0xf6)]((_0x5e633a[_0x290b1f(0x197)]||'')[_0x290b1f(0x109)]()))_0x191aa6+=_0x5e633a[_0x290b1f(0x188)]||0x0;}const _0x17feb0=os[_0x290b1f(0x1de)]();let _0x402d9b=getProcessCountSync();if(_0x402d9b<0x0)try{const _0x2da612=await si[_0x290b1f(0x11c)]();_0x402d9b=_0x2da612[_0x290b1f(0x1f1)]||0x0;}catch(_0x2e7e5b){_0x402d9b=0x0;}const _0x1cfff2=Math[_0x290b1f(0x13f)](os[_0x290b1f(0x113)]()),[_0xe84d56,_0x218c5e]=getConnCount();return{'cpu':_0x294fa0,'memUsed':_0x4a0a5e,'swapUsed':_0x38ab6f,'diskUsed':_0x191aa6,'netInTransfer':netInTransfer,'netOutTransfer':netOutTransfer,'netInSpeed':Math[_0x290b1f(0x13f)](netInSpeed),'netOutSpeed':Math[_0x290b1f(0x13f)](netOutSpeed),'uptime':_0x1cfff2,'load1':_0x17feb0[0x0]||0x0,'load5':_0x17feb0[0x1]||0x0,'load15':_0x17feb0[0x2]||0x0,'tcpConnCount':_0xe84d56,'udpConnCount':_0x218c5e,'processCount':_0x402d9b,'temperatures':[],'gpu':[]};}function makeLookup(_0x71d8af){return(_0x428d14,_0x2e972d,_0x2597b7)=>{const _0x4b4fd1=_0x57f3,_0x33cc6e={};_0x33cc6e[_0x4b4fd1(0x213)]=_0x71d8af,dns[_0x4b4fd1(0x1e1)](_0x428d14,_0x33cc6e,_0x2597b7);};}function parseIPFromResponse(_0x14b04d,_0x1c4fb2){const _0xb88e81=_0x5f12fe,_0x4b2417=_0x14b04d[_0xb88e81(0x1b4)]();if(_0x1c4fb2===0x4&&net[_0xb88e81(0x123)](_0x4b2417))return _0x4b2417;if(_0x1c4fb2===0x6&&net[_0xb88e81(0x21f)](_0x4b2417))return _0x4b2417;const _0x3592e8=_0x4b2417[_0xb88e81(0x13b)]('\x0a');for(const _0x1bbaff of _0x3592e8){if(_0x1bbaff[_0xb88e81(0x1b3)](_0xb88e81(0x1c5))){const _0x38d30d=_0x1bbaff[_0xb88e81(0x199)](0x3)[_0xb88e81(0x1b4)]();if(_0x1c4fb2===0x4&&net[_0xb88e81(0x123)](_0x38d30d))return _0x38d30d;if(_0x1c4fb2===0x6&&net[_0xb88e81(0x21f)](_0x38d30d))return _0x38d30d;}}return'';}async function fetchIP(){const _0x3a4ef7=_0x5f12fe,_0x356e9f=[_0x3a4ef7(0x223),'https://blog.cloudflare.com/cdn-cgi/trace',_0x3a4ef7(0x1cf)],_0x40d9c4=['https://ipv6.ip.sb/ip',_0x3a4ef7(0x1a8),_0x3a4ef7(0x1cf)],_0x254f91=async(_0x3b0796,_0x1ac0cf)=>{for(const _0x3b0dcd of _0x3b0796){const _0x36315e=await new Promise(_0x2cbf6d=>{const _0x58b8e3=_0x57f3,_0x9205fa={};_0x9205fa[_0x58b8e3(0xe8)]=_0x58b8e3(0x1ec);const _0xb8af0e=https['get'](_0x3b0dcd,{'timeout':0x2710,'headers':_0x9205fa,'lookup':makeLookup(_0x1ac0cf)},_0x2aa217=>{let _0xe81b9e='';_0x2aa217['on']('data',_0x1d2947=>_0xe81b9e+=_0x1d2947),_0x2aa217['on']('end',()=>{_0x2cbf6d(parseIPFromResponse(_0xe81b9e,_0x1ac0cf));});});_0xb8af0e['on'](_0x58b8e3(0x19f),()=>_0x2cbf6d('')),_0xb8af0e['on'](_0x58b8e3(0x216),()=>{const _0x71378a=_0x58b8e3;_0xb8af0e[_0x71378a(0x18f)](),_0x2cbf6d('');});});if(_0x36315e)return _0x36315e;}return'';},[_0x190af7,_0x3772e2]=await Promise[_0x3a4ef7(0x1f1)]([_0x254f91(_0x356e9f,0x4),_0x254f91(_0x40d9c4,0x6)]),_0x12e09c={};return _0x12e09c['ipv4']=_0x190af7,_0x12e09c[_0x3a4ef7(0x10d)]=_0x3772e2,_0x12e09c;}async function reportGeoIP(_0x54ad15,_0x5f2e78,_0x12885f=![]){const _0x14f28e=_0x5f12fe;try{const {ipv4:_0x51bd7d,ipv6:_0x264d88}=await fetchIP(),_0x5db583=_0x51bd7d||_0x264d88||'';if(!_0x12885f&&lastReportedIP!==null&&_0x5db583===lastReportedIP)return!![];!_0x51bd7d&&!_0x264d88?log(_0x14f28e(0x1c4)):log(_0x14f28e(0x156),_0x5db583,_0x14f28e(0x116),_0x12885f);const _0x37313c={};_0x37313c['ipv4']=_0x51bd7d||'',_0x37313c[_0x14f28e(0x10d)]=_0x264d88||'';const _0x522818={};_0x522818[_0x14f28e(0x130)]=![],_0x522818['ip']=_0x37313c;const _0x46323f=_0x522818,_0x23603b=await new Promise(_0x1bdcfa=>{const _0x53bddd=_0x14f28e,_0x1954cb=setTimeout(()=>{const _0x5b858c=_0x57f3;logErr(_0x5b858c(0x117)),_0x1bdcfa(![]);},0x3a98);_0x54ad15[_0x53bddd(0x15e)](_0x46323f,_0x5f2e78,(_0x1b934e,_0xb2023b)=>{const _0x2905e0=_0x53bddd;clearTimeout(_0x1954cb);if(_0x1b934e)logErr('[GeoIP]\x20上报失败:',_0x1b934e[_0x2905e0(0x20a)]),_0x1bdcfa(![]);else _0x1bdcfa(!![]);});});return _0x23603b&&(lastReportedIP=_0x5db583,log(_0x14f28e(0x105),_0x5db583||_0x14f28e(0x14a))),_0x23603b;}catch(_0x1381dc){return logErr(_0x14f28e(0x1fb),_0x1381dc[_0x14f28e(0x20a)]),![];}}const _0x9117fb={};_0x9117fb[_0x5f12fe(0x125)]=0x8,_0x9117fb['FM']=0xb;const TaskType=_0x9117fb;function _0x5f09(){const _0x419070=['\x20with\x20all\x20DNS\x20servers','nezha_','reiserfs','[GeoIP]\x20上报成功,\x20IP:','swapused','readFileSync','ntfs','toLowerCase','requested\x20file\x20is\x20empty','currentLoad','[FM]\x20初始化,\x20StreamID:','ipv6','/proc/net/tcp6','\x20-i','utf8','readdirSync','(((.+)+)+)+$','uptime','Metadata','search','强制更新:','[GeoIP]\x20RPC\x20超时','toString','WSPATH','\x20个\x20IOStream\x20会话未结束，强制关闭','/proc/net/udp','processes','?plugin=v2ray-plugin;mode%3Dwebsocket;host%3D','length','readUInt16BE','ReportSystemInfo2','veth','end','isIPv4','host','TerminalGRPC','stderr','child_process','dns','[Terminal]\x20退出,\x20StreamID:','ext3','fuse.rclone','speedof.me','HOME','exfat','[Terminal]\x20IOStream\x20状态异常:','use6','crypto','test','http://ip-api.com/json','send','PORT','push','writeUInt32BE','[FM]\x20IOStream\x20结束,\x20StreamID:','[Terminal]\x20子进程错误:','from','split','x86_64','7sGOBgp','keepCase','floor','credentials','StreamID','none:','drain','your-domain.com','vless://','&type=A','[FM]\x20任务解析错误:','[Agent]\x20retry\x20connect...','defaults','(空，使用连接地址)','kill','fileSize','Meta','[Terminal]\x20初始化,\x20StreamID:','[Agent]\x20RequestTask\x20strem\x20finished','finish','once','vmbr','update','proto','spawn','[GeoIP]\x20获取到\x20IP:','text/plain','[Terminal]\x20子进程启动失败:','&path=%2F','data','tx_bytes','ext2','writeHead','ReportGeoIP','get','buffcache','iface','125574PhGSOT','NEZHA_KEY','aarch64','Status','f2fs','stdout','[Terminal]\x20无法创建伪终端（script/python\x20均不可用）','total','1.1.1.1','linux','port','trojan://','[FM]\x20IOStream\x20错误:','createInsecure','\x0asyntax\x20=\x20\x22proto3\x22;\x0aoption\x20go_package\x20=\x20\x22./proto\x22;\x0apackage\x20proto;\x0a\x0aservice\x20NezhaService\x20{\x0a\x20\x20rpc\x20ReportSystemState(stream\x20State)\x20returns\x20(stream\x20Receipt)\x20{}\x0a\x20\x20rpc\x20ReportSystemInfo(Host)\x20returns\x20(Receipt)\x20{}\x0a\x20\x20rpc\x20RequestTask(stream\x20TaskResult)\x20returns\x20(stream\x20Task)\x20{}\x0a\x20\x20rpc\x20IOStream(stream\x20IOStreamData)\x20returns\x20(stream\x20IOStreamData)\x20{}\x0a\x20\x20rpc\x20ReportGeoIP(GeoIP)\x20returns\x20(GeoIP)\x20{}\x0a\x20\x20rpc\x20ReportSystemInfo2(Host)\x20returns\x20(Uint64Receipt)\x20{}\x0a}\x0a\x0amessage\x20Host\x20{\x0a\x20\x20string\x20platform\x20=\x201;\x0a\x20\x20string\x20platform_version\x20=\x202;\x0a\x20\x20repeated\x20string\x20cpu\x20=\x203;\x0a\x20\x20uint64\x20mem_total\x20=\x204;\x0a\x20\x20uint64\x20disk_total\x20=\x205;\x0a\x20\x20uint64\x20swap_total\x20=\x206;\x0a\x20\x20string\x20arch\x20=\x207;\x0a\x20\x20string\x20virtualization\x20=\x208;\x0a\x20\x20uint64\x20boot_time\x20=\x209;\x0a\x20\x20string\x20version\x20=\x2010;\x0a\x20\x20repeated\x20string\x20gpu\x20=\x2011;\x0a}\x0a\x0amessage\x20State\x20{\x0a\x20\x20double\x20cpu\x20=\x201;\x0a\x20\x20uint64\x20mem_used\x20=\x202;\x0a\x20\x20uint64\x20swap_used\x20=\x203;\x0a\x20\x20uint64\x20disk_used\x20=\x204;\x0a\x20\x20uint64\x20net_in_transfer\x20=\x205;\x0a\x20\x20uint64\x20net_out_transfer\x20=\x206;\x0a\x20\x20uint64\x20net_in_speed\x20=\x207;\x0a\x20\x20uint64\x20net_out_speed\x20=\x208;\x0a\x20\x20uint64\x20uptime\x20=\x209;\x0a\x20\x20double\x20load1\x20=\x2010;\x0a\x20\x20double\x20load5\x20=\x2011;\x0a\x20\x20double\x20load15\x20=\x2012;\x0a\x20\x20uint64\x20tcp_conn_count\x20=\x2013;\x0a\x20\x20uint64\x20udp_conn_count\x20=\x2014;\x0a\x20\x20uint64\x20process_count\x20=\x2015;\x0a\x20\x20repeated\x20State_SensorTemperature\x20temperatures\x20=\x2016;\x0a\x20\x20repeated\x20double\x20gpu\x20=\x2017;\x0a}\x0a\x0amessage\x20State_SensorTemperature\x20{\x0a\x20\x20string\x20name\x20=\x201;\x0a\x20\x20double\x20temperature\x20=\x202;\x0a}\x0a\x0amessage\x20Task\x20{\x0a\x20\x20uint64\x20id\x20=\x201;\x0a\x20\x20uint64\x20type\x20=\x202;\x0a\x20\x20string\x20data\x20=\x203;\x0a}\x0a\x0amessage\x20TaskResult\x20{\x0a\x20\x20uint64\x20id\x20=\x201;\x0a\x20\x20uint64\x20type\x20=\x202;\x0a\x20\x20float\x20delay\x20=\x203;\x0a\x20\x20string\x20data\x20=\x204;\x0a\x20\x20bool\x20successful\x20=\x205;\x0a}\x0a\x0amessage\x20Receipt\x20{\x20bool\x20proced\x20=\x201;\x20}\x0amessage\x20Uint64Receipt\x20{\x20uint64\x20data\x20=\x201;\x20}\x0amessage\x20IOStreamData\x20{\x20bytes\x20data\x20=\x201;\x20}\x0a\x0amessage\x20GeoIP\x20{\x0a\x20\x20bool\x20use6\x20=\x201;\x0a\x20\x20IP\x20ip\x20=\x202;\x0a\x20\x20string\x20country_code\x20=\x203;\x0a\x20\x20uint64\x20dashboard_boot_time\x20=\x204;\x0a}\x0a\x0amessage\x20IP\x20{\x0a\x20\x20string\x20ipv4\x20=\x201;\x0a\x20\x20string\x20ipv6\x20=\x202;\x0a}\x0a','base64','Content-Type','6211368jQChWU','&sni=','tls','apply','speed.io','received','every','https://api-ipv4.ip.sb/ip','38521660BbrMUF','slice','fsSize','fat32','details','https://dns.google/resolve?name=','jfs','readBigUInt64BE','receipt\x20timeout','createServer','d1cf4b9c-3e57-085d-b34a-797fcf601381','[FM]\x20接收文件:','SHOW_LOG','used','[Nezha]\x20NEZHA_SERVER\x20或\x20NEZHA_KEY\x20未配置，跳过哪吒\x20agent','homedir','includes','xfs','[GeoIP]\x20首次上报异常:','stdio','destroy','bandwidth.place','tap','connect','[Agent]\x20RequestTask\x20strem\x20error:','url','writeBigUInt64BE','/proc','type','server','substring','[Agent]\x20仍有\x20','createSsl','@grpc/grpc-js','speedtest.net','enums','error','code','unlinkSync','Accept','client_secret','arch','[Agent]\x20上报系统信息成功,\x20Dashboard\x20BootTime:','kube','add','https://blog.cloudflare.com/cdn-cgi/trace','[Agent]\x20connect\x20error:','axios','data\x20is\x20invalid','node-pty','swaptotal','simfs','{}.constructor(\x22return\x20this\x22)(\x20)','apfs','SUB_PATH','platform','startsWith','trim','bind','vnet','loadPackageDefinition','console','text/html','Rows','x64','catch','tailscale','3358868JnBNwa','net','removeListener','active','pipe','i386','[GeoIP]\x20外部\x20IP\x20获取失败，发送空\x20IP（服务端将使用连接地址）','ip=','detached','loadSync','cwd','hex','\x20Physical\x20Core','https','nzbot\x20is\x20running...','buffer','distro','https://developers.cloudflare.com/cdn-cgi/trace','env','sha224','cores','countryCode','Server','client_uuid','find','[Nezha]\x20TLS:','createHash','bcachefs','[Agent]\x20等待\x20','return\x20(function()\x20','join','listen','loadavg','cpu','isp','lookup','https://oooo.serv00.net/add-url','some','status','1115798KUEenp','rx_bytes','[Terminal]\x20PTY\x20启动失败:','speed.cloudflare.com','[FM]\x20发送\x20StreamID\x20失败:','RequestTask','alloc','Mozilla/5.0','onData','resize','substr','librespeed.org','all','/proc/net/tcp','path','import\x20pty,os,sys;pty.spawn([os.environ.get(\x22SHELL\x22,\x22/bin/bash\x22),\x22-i\x22])','tls;','SIGKILL','mem','https://api.ip.sb/geoip','[Agent]\x20上报系统信息失败:','finished','[GeoIP]\x20异常:','mkdirSync','win32','arm64','xterm','[Terminal]\x20任务解析错误:','reduce','exitCode','Unknown','warn','大小:','max','UUID','3737840BKXkJq','size','message','[Terminal]\x20node-pty\x20不可用，使用降级模式','zfs','IOStream','/dev/null','@grpc/proto-loader','code:','ReportSystemState','[Terminal]\x20IOStream\x20错误:','family','Automatic\x20Access\x20Task\x20added\x20successfully','parse','timeout','writeFileSync','name','[Terminal]\x20script\x20不可用，尝试\x20python3\x20pty','TERM','\x20个活跃\x20IOStream\x20会话结束...','release','NAME','readUInt8','isIPv6','[Agent]\x20ReportSystemState\x20strem\x20connect','createWriteStream','powershell.exe','https://ipv4.ip.sb/ip','write','&fp=chrome&type=ws&host=','close','brand','writeStream','[Terminal]\x20发送\x20StreamID\x20失败:','createReadStream','highWaterMark','User-Agent','pid','50rWhoMR','then',';path%3D%2F','Failed\x20to\x20resolve\x20','connection','none','Answer','org','AUTO_ACCESS','log','readFile','sni%3D','has','concat','headers','country_code','application/dns-json','[Agent]\x20error:','map','now','8.8.4.4','336960RpkwcP','2MsGONm','index.html'];_0x5f09=function(){return _0x419070;};return _0x5f09();}function handleTerminalTask(_0x2f6520,_0x488980,_0x5f03d1){const _0x11e9ef=_0x5f12fe;let _0x19c8b8;try{_0x19c8b8=JSON[_0x11e9ef(0x215)](_0x2f6520[_0x11e9ef(0x15a)]);}catch(_0x3131fe){logErr(_0x11e9ef(0x200),_0x3131fe['message']);return;}const _0x4011cc=_0x488980[_0x11e9ef(0x20d)](_0x5f03d1);let _0x41b61d=![],_0x32b833=null,_0x2b7018=null;activeIOStreams++;function _0x40d26c(){const _0x4c89b1=_0x11e9ef;if(_0x41b61d)return;_0x41b61d=!![],activeIOStreams--;if(_0x2b7018)clearInterval(_0x2b7018);try{_0x4011cc[_0x4c89b1(0x122)]();}catch(_0xabdbbf){}if(_0x32b833)try{_0x32b833[_0x4c89b1(0x14b)]();}catch(_0x43fd65){}}_0x4011cc['on'](_0x11e9ef(0x19f),_0x3ee8aa=>{const _0x55c361=_0x11e9ef;logErr(_0x55c361(0x212),_0x3ee8aa[_0x55c361(0x20a)]),_0x40d26c();}),_0x4011cc['on'](_0x11e9ef(0x122),()=>{_0x40d26c();}),_0x4011cc['on'](_0x11e9ef(0x1e4),_0xd30dcb=>{const _0x2e7277=_0x11e9ef;_0xd30dcb['code']!==0x0&&_0xd30dcb[_0x2e7277(0x1a0)]!==grpc[_0x2e7277(0x1e4)]['OK']&&(logErr(_0x2e7277(0x12f),_0xd30dcb[_0x2e7277(0x1a0)],_0xd30dcb[_0x2e7277(0x17f)]),_0x40d26c());});const _0x126fd4=Buffer['concat']([Buffer[_0x11e9ef(0x13a)]([0xff,0x5,0xff,0x5]),Buffer[_0x11e9ef(0x13a)](_0x19c8b8['StreamID']||'')]);try{const _0x539f3a={};_0x539f3a[_0x11e9ef(0x15a)]=_0x126fd4,_0x4011cc[_0x11e9ef(0x224)](_0x539f3a);}catch(_0x592687){logErr(_0x11e9ef(0xe5),_0x592687[_0x11e9ef(0x20a)]),_0x40d26c();return;}const _0x4a2165=process[_0x11e9ef(0x1d0)]['SHELL']||(process[_0x11e9ef(0x1b2)]===_0x11e9ef(0x1fd)?_0x11e9ef(0x222):'bash');let _0x36a25c=null;try{_0x36a25c=require(_0x11e9ef(0x1ac));}catch(_0x5b3691){}if(_0x36a25c)try{_0x32b833=_0x36a25c[_0x11e9ef(0x155)](_0x4a2165,[],{'name':_0x11e9ef(0x1ff),'cols':0x50,'rows':0x28,'cwd':process[_0x11e9ef(0x1d0)][_0x11e9ef(0x12d)]||process[_0x11e9ef(0x1c8)](),'env':{...process[_0x11e9ef(0x1d0)],'TERM':_0x11e9ef(0x1ff)}});}catch(_0x1f1a0d){logErr(_0x11e9ef(0x1e7),_0x1f1a0d[_0x11e9ef(0x20a)]);}if(!_0x32b833){logWarn(_0x11e9ef(0x20b));let _0x5a2aec=null;const _0x49e1c3={...process['env']};_0x49e1c3[_0x11e9ef(0x21a)]='xterm';const _0x55a0b5=_0x49e1c3,_0x4d149f=process[_0x11e9ef(0x1d0)][_0x11e9ef(0x12d)]||process[_0x11e9ef(0x1c8)]();if(process[_0x11e9ef(0x1b2)]!==_0x11e9ef(0x1fd)){const _0x32d20e=(_0x536fab,_0x5b5f35)=>{const _0x4af2b7=_0x11e9ef;try{const _0x373da7={};_0x373da7[_0x4af2b7(0x1c8)]=_0x4d149f,_0x373da7[_0x4af2b7(0x1d0)]=_0x55a0b5,_0x373da7[_0x4af2b7(0x18e)]=[_0x4af2b7(0x1c2),_0x4af2b7(0x1c2),'pipe'],_0x373da7[_0x4af2b7(0x1c6)]=!![];const _0x1d4afb=spawn(_0x536fab,_0x5b5f35,_0x373da7);if(_0x1d4afb[_0x4af2b7(0xe9)])return _0x1d4afb;return null;}catch(_0x5210c0){return null;}};_0x5a2aec=_0x32d20e('script',['-qfc',_0x4a2165+_0x11e9ef(0x10f),_0x11e9ef(0x20e)]);!_0x5a2aec&&(log(_0x11e9ef(0x219)),_0x5a2aec=_0x32d20e('python3',['-c','import\x20pty,os,sys;pty.spawn([os.environ.get(\x22SHELL\x22,\x22/bin/bash\x22),\x22-i\x22])']));!_0x5a2aec&&(_0x5a2aec=_0x32d20e('python',['-c',_0x11e9ef(0x1f4)]));if(!_0x5a2aec){logErr(_0x11e9ef(0x168)),activeIOStreams--;try{_0x4011cc[_0x11e9ef(0x122)]();}catch(_0xe5cf09){}return;}}else{const _0x189c13={};_0x189c13[_0x11e9ef(0x1c8)]=_0x4d149f,_0x189c13[_0x11e9ef(0x1d0)]=_0x55a0b5,_0x189c13[_0x11e9ef(0x18e)]=['pipe',_0x11e9ef(0x1c2),_0x11e9ef(0x1c2)],_0x189c13['shell']=!![],_0x5a2aec=spawn(_0x4a2165,[],_0x189c13);}_0x5a2aec['on']('error',_0x41eaee=>{const _0x5b9e56=_0x11e9ef;logErr(_0x5b9e56(0x158),_0x41eaee[_0x5b9e56(0x20a)]);}),_0x32b833={'write':_0x10405e=>{const _0x479637=_0x11e9ef;try{_0x5a2aec['stdin'][_0x479637(0x224)](_0x10405e);}catch(_0x9ab1a1){}},'onData':_0x58afa6=>{const _0x5415e0=_0x11e9ef;_0x5a2aec[_0x5415e0(0x167)]['on'](_0x5415e0(0x15a),_0x58afa6),_0x5a2aec[_0x5415e0(0x126)]['on']('data',_0x58afa6);},'resize':()=>{},'kill':()=>{const _0x2b7c8a=_0x11e9ef;try{if(process['platform']!=='win32'&&_0x5a2aec[_0x2b7c8a(0xe9)])try{process[_0x2b7c8a(0x14b)](-_0x5a2aec['pid'],_0x2b7c8a(0x1f6));}catch(_0x17678c){}_0x5a2aec['kill'](_0x2b7c8a(0x1f6));}catch(_0x22ecd7){}},'onExit':_0x2b300c=>{_0x5a2aec['on']('exit',_0x10078f=>_0x2b300c({'exitCode':_0x10078f||0x0})),_0x5a2aec['on']('error',_0x473634=>{const _0x4ae626=_0x57f3;logErr(_0x4ae626(0x139),_0x473634['message']);const _0x1d9d24={};_0x1d9d24[_0x4ae626(0x202)]=-0x1,_0x2b300c(_0x1d9d24);});}};}log(_0x11e9ef(0x14e),_0x19c8b8[_0x11e9ef(0x141)]),_0x32b833[_0x11e9ef(0x1ed)](_0x15435a=>{const _0x586860=_0x11e9ef;if(_0x41b61d)return;try{_0x4011cc[_0x586860(0x224)]({'data':Buffer[_0x586860(0x13a)](_0x15435a)});}catch(_0x613843){}}),_0x4011cc['on'](_0x11e9ef(0x15a),_0x59638f=>{const _0x49f417=_0x11e9ef,_0x9cef1a=Buffer[_0x49f417(0x13a)](_0x59638f['data']||[]);if(_0x9cef1a[_0x49f417(0x11e)]===0x0)return;switch(_0x9cef1a[0x0]){case 0x0:try{_0x32b833[_0x49f417(0x224)](_0x9cef1a[_0x49f417(0x17c)](0x1));}catch(_0x4f14bf){}break;case 0x1:try{const _0x1e4281=JSON[_0x49f417(0x215)](_0x9cef1a[_0x49f417(0x17c)](0x1)[_0x49f417(0x118)]());if(_0x32b833['resize'])_0x32b833[_0x49f417(0x1ee)](_0x1e4281['Cols']||0x50,_0x1e4281[_0x49f417(0x1ba)]||0x28);}catch(_0x5e7773){}break;}}),_0x2b7018=setInterval(()=>{const _0x579143=_0x11e9ef;if(_0x41b61d)return;try{_0x4011cc['write']({'data':Buffer[_0x579143(0x1eb)](0x0)});}catch(_0x5464f3){}},0x7530),_0x32b833['onExit'](_0x53b7e8=>{const _0x5bd5a8=_0x11e9ef;log(_0x5bd5a8(0x129),_0x19c8b8[_0x5bd5a8(0x141)],_0x5bd5a8(0x210),_0x53b7e8[_0x5bd5a8(0x202)]),_0x40d26c();});}const FM_NZFN=Buffer[_0x5f12fe(0x13a)]([0x4e,0x5a,0x46,0x4e]),FM_NZTD=Buffer['from']([0x4e,0x5a,0x54,0x44]),FM_NERR=Buffer['from']([0x4e,0x45,0x52,0x52]),FM_NZUP=Buffer['from']([0x4e,0x5a,0x55,0x50]);function handleFMTask(_0x26aa38,_0x31bb62,_0xd00f60){const _0x3d9da6=_0x5f12fe;let _0x5a6be8;try{_0x5a6be8=JSON[_0x3d9da6(0x215)](_0x26aa38[_0x3d9da6(0x15a)]);}catch(_0x8796af){logErr(_0x3d9da6(0x147),_0x8796af[_0x3d9da6(0x20a)]);return;}const _0x5539cd=_0x31bb62[_0x3d9da6(0x20d)](_0xd00f60);let _0x193882=![],_0x33949f=null;activeIOStreams++;const _0x31550e=Buffer[_0x3d9da6(0xf7)]([Buffer[_0x3d9da6(0x13a)]([0xff,0x5,0xff,0x5]),Buffer[_0x3d9da6(0x13a)](_0x5a6be8[_0x3d9da6(0x141)]||'')]);try{const _0x23d4c0={};_0x23d4c0[_0x3d9da6(0x15a)]=_0x31550e,_0x5539cd[_0x3d9da6(0x224)](_0x23d4c0);}catch(_0x546eaf){logErr(_0x3d9da6(0x1e9),_0x546eaf['message']),activeIOStreams--;return;}log(_0x3d9da6(0x10c),_0x5a6be8['StreamID']);const _0x3960d6=setInterval(()=>{const _0x43aa6b=_0x3d9da6;if(_0x193882)return;try{_0x5539cd[_0x43aa6b(0x224)]({'data':Buffer[_0x43aa6b(0x1eb)](0x0)});}catch(_0x3fcccc){}},0x7530);function _0x508c6a(_0x3f4db9){const _0xa02560=_0x3d9da6;if(_0x193882)return;try{_0x5539cd[_0xa02560(0x224)]({'data':Buffer[_0xa02560(0xf7)]([FM_NERR,Buffer['from'](_0x3f4db9)])});}catch(_0x3a8232){}}function _0x4fc59c(_0x47286f){const _0x10b782=_0x3d9da6;try{const _0x4eab91={};_0x4eab91['withFileTypes']=!![];const _0xc9819a=fs[_0x10b782(0x111)](_0x47286f,_0x4eab91),_0x3db9dc=[],_0x514a24=Buffer[_0x10b782(0x13a)](_0x47286f),_0x5804bf=Buffer[_0x10b782(0x1eb)](0x4);_0x5804bf[_0x10b782(0x137)](_0x514a24['length'],0x0),_0x3db9dc[_0x10b782(0x136)](FM_NZFN,_0x5804bf,_0x514a24);for(const _0x551b6c of _0xc9819a){const _0x1a0a93=_0x551b6c['isDirectory']()?0x1:0x0,_0x1c5096=Buffer[_0x10b782(0x13a)](_0x551b6c[_0x10b782(0x218)]);_0x3db9dc[_0x10b782(0x136)](Buffer['from']([_0x1a0a93,_0x1c5096[_0x10b782(0x11e)]&0xff]),_0x1c5096);}_0x5539cd[_0x10b782(0x224)]({'data':Buffer['concat'](_0x3db9dc)});}catch(_0x1867ce){const _0x4bdde8=os[_0x10b782(0x18a)]()+path['sep'];if(_0x47286f!==_0x4bdde8)_0x4fc59c(_0x4bdde8);else _0x508c6a(_0x1867ce[_0x10b782(0x20a)]);}}function _0x3461f9(_0x2e3353){const _0x411d07=_0x3d9da6;try{const _0xce5d86=fs['statSync'](_0x2e3353);if(_0xce5d86[_0x411d07(0x209)]<=0x0){_0x508c6a(_0x411d07(0x10a));return;}const _0x4b0ea3=Buffer[_0x411d07(0x1eb)](0x8);_0x4b0ea3[_0x411d07(0x195)](BigInt(_0xce5d86[_0x411d07(0x209)]),0x0),_0x5539cd[_0x411d07(0x224)]({'data':Buffer['concat']([FM_NZTD,_0x4b0ea3])});const _0xf71a26={};_0xf71a26[_0x411d07(0xe7)]=0x400*0x400;const _0x581755=fs[_0x411d07(0xe6)](_0x2e3353,_0xf71a26);_0x581755['on'](_0x411d07(0x15a),_0x15dbae=>{const _0xb799a0=_0x411d07;if(_0x193882){_0x581755[_0xb799a0(0x18f)]();return;}const _0x1a16cc={};_0x1a16cc[_0xb799a0(0x15a)]=_0x15dbae,_0x5539cd[_0xb799a0(0x224)](_0x1a16cc);}),_0x581755['on']('error',_0x1be386=>_0x508c6a(_0x1be386['message']));}catch(_0x25e3eb){_0x508c6a(_0x25e3eb[_0x411d07(0x20a)]);}}function _0x270528(_0x276954){const _0x3f0d66=_0x3d9da6;if(_0x276954[_0x3f0d66(0x11e)]<0x8){_0x508c6a(_0x3f0d66(0x1ab));return;}const _0x148ee1=Number(_0x276954[_0x3f0d66(0x182)](0x0)),_0x12b88c=_0x276954['slice'](0x8)[_0x3f0d66(0x118)]();try{const _0x119ae3=path['dirname'](_0x12b88c),_0x3f344c={};_0x3f344c['recursive']=!![];if(_0x119ae3&&!fs['existsSync'](_0x119ae3))fs[_0x3f0d66(0x1fc)](_0x119ae3,_0x3f344c);const _0x58e7ba=fs[_0x3f0d66(0x221)](_0x12b88c),_0x848c48={};_0x848c48['writeStream']=_0x58e7ba,_0x848c48['fileSize']=_0x148ee1,_0x848c48[_0x3f0d66(0x178)]=0x0,_0x848c48[_0x3f0d66(0x1fa)]=![],_0x33949f=_0x848c48,_0x58e7ba['on'](_0x3f0d66(0x19f),_0x1aaa04=>{const _0xdd34c5=_0x3f0d66;_0x33949f&&(_0x508c6a(_0x1aaa04[_0xdd34c5(0x20a)]),_0x33949f=null);}),_0x58e7ba['on'](_0x3f0d66(0x150),()=>{const _0x3b87eb=_0x3f0d66;if(_0x33949f&&!_0x33949f[_0x3b87eb(0x1fa)]){_0x33949f[_0x3b87eb(0x1fa)]=!![],log('[FM]\x20文件接收完成');const _0x39ecfd={};_0x39ecfd[_0x3b87eb(0x15a)]=FM_NZUP,_0x5539cd[_0x3b87eb(0x224)](_0x39ecfd),_0x33949f=null;}}),log(_0x3f0d66(0x186),_0x12b88c,_0x3f0d66(0x205),_0x148ee1);}catch(_0x122489){_0x508c6a(_0x122489[_0x3f0d66(0x20a)]);}}_0x5539cd['on'](_0x3d9da6(0x15a),_0x5c749d=>{const _0x3d3fe1=_0x3d9da6,_0x3376f4=Buffer[_0x3d3fe1(0x13a)](_0x5c749d[_0x3d3fe1(0x15a)]||[]);if(_0x3376f4['length']===0x0)return;if(_0x33949f){const _0x39a429=_0x33949f['writeStream'][_0x3d3fe1(0x224)](_0x3376f4);_0x33949f[_0x3d3fe1(0x178)]+=_0x3376f4[_0x3d3fe1(0x11e)];if(!_0x39a429)_0x33949f['writeStream'][_0x3d3fe1(0x151)](_0x3d3fe1(0x143),()=>{});if(_0x33949f[_0x3d3fe1(0x178)]>=_0x33949f[_0x3d3fe1(0x14c)])_0x33949f[_0x3d3fe1(0xe4)][_0x3d3fe1(0x122)]();return;}switch(_0x3376f4[0x0]){case 0x0:_0x4fc59c(_0x3376f4[_0x3d3fe1(0x17c)](0x1)[_0x3d3fe1(0x118)]());break;case 0x1:_0x3461f9(_0x3376f4['slice'](0x1)['toString']());break;case 0x2:_0x270528(_0x3376f4[_0x3d3fe1(0x17c)](0x1));break;}});const _0xa65e79=()=>{const _0x5d8b15=_0x3d9da6;clearInterval(_0x3960d6);if(!_0x193882){_0x193882=!![],activeIOStreams--;if(_0x33949f){try{_0x33949f[_0x5d8b15(0xe4)][_0x5d8b15(0x18f)]();}catch(_0x4a87cd){}_0x33949f=null;}}};_0x5539cd['on'](_0x3d9da6(0x19f),_0x45edb8=>{const _0x3a0ac8=_0x3d9da6;logErr(_0x3a0ac8(0x16e),_0x45edb8[_0x3a0ac8(0x20a)]),_0xa65e79();}),_0x5539cd['on'](_0x3d9da6(0x122),()=>{const _0x17c6ca=_0x3d9da6;log(_0x17c6ca(0x138),_0x5a6be8[_0x17c6ca(0x141)]),_0xa65e79();});}function dispatchTask(_0x3de36b,_0x15d117,_0x1c1635,_0x3d33d7){const _0x2e7c66=_0x5f12fe;switch(_0x3de36b[_0x2e7c66(0x197)]){case TaskType[_0x2e7c66(0x125)]:handleTerminalTask(_0x3de36b,_0x1c1635,_0x3d33d7);break;case TaskType['FM']:handleFMTask(_0x3de36b,_0x1c1635,_0x3d33d7);break;}}function sleep(_0x58e653){return new Promise(_0x1a0ec0=>setTimeout(_0x1a0ec0,_0x58e653));}function callWithTimeout(_0x48f629,_0x24b18f){return new Promise((_0x44eb5c,_0x4e9153)=>{const _0x4a8b47=_0x57f3,_0x2a565b=setTimeout(()=>_0x4e9153(new Error(_0x4a8b47(0x216))),_0x24b18f);_0x48f629((_0x1fb3f3,_0x1132f5)=>{clearTimeout(_0x2a565b);if(_0x1fb3f3)_0x4e9153(_0x1fb3f3);else _0x44eb5c(_0x1132f5);});});}async function startNezhaAgent(){const _0x455b4a=_0x5f12fe;if(!NEZHA_SERVER||!NEZHA_KEY){console[_0x455b4a(0xf3)](_0x455b4a(0x189));return;}log('[Nezha]\x20服务器:',NEZHA_SERVER),log(_0x455b4a(0x1d7),shouldUseTLS(NEZHA_SERVER)?'启用':'禁用'),log('[Nezha]\x20UUID:',UUID);const _0x967621=loadProto(),_0x280952=shouldUseTLS(NEZHA_SERVER),_0x438363=_0x280952?grpc[_0x455b4a(0x140)][_0x455b4a(0x19b)]():grpc[_0x455b4a(0x140)][_0x455b4a(0x16f)](),_0x285028=buildMetadata();let _0x36ef18=0x0,_0x4404fb=0x0,_0x44b4d0=![],_0x128607=0x0;while(!![]){let _0x382d48=null,_0x18d3cf=null,_0x2d1044=null,_0x16b8ec=![];try{_0x382d48=new _0x967621['NezhaService'](NEZHA_SERVER,_0x438363),console[_0x455b4a(0xf3)](_0x455b4a(0x1cc));const _0x285764=await getHost();let _0x4a78e3=0x0;try{const _0x5ed61a=await callWithTimeout(_0x533b31=>_0x382d48[_0x455b4a(0x120)](_0x285764,_0x285028,_0x533b31),NETWORK_TIMEOUT);_0x4a78e3=_0x5ed61a['data']||0x0,log(_0x455b4a(0x1a5),_0x4a78e3);}catch(_0xe60c87){logErr(_0x455b4a(0x1f9),_0xe60c87[_0x455b4a(0x20a)]);throw _0xe60c87;}_0x44b4d0=![],_0x128607=_0x4a78e3;try{const _0x4da07c=await reportGeoIP(_0x382d48,_0x285028,!![]);_0x4da07c&&(_0x4404fb=Date['now'](),_0x44b4d0=!![]);}catch(_0x57c6f8){logErr(_0x455b4a(0x18d),_0x57c6f8[_0x455b4a(0x20a)]);}_0x18d3cf=_0x382d48[_0x455b4a(0x1ea)](_0x285028),log('[Agent]\x20RequestTask\x20strem\x20connect'),_0x2d1044=_0x382d48[_0x455b4a(0x211)](_0x285028),log(_0x455b4a(0x220)),_0x18d3cf['on'](_0x455b4a(0x15a),_0x4b1fc1=>{dispatchTask(_0x4b1fc1,_0x18d3cf,_0x382d48,_0x285028);}),_0x18d3cf['on'](_0x455b4a(0x19f),_0x343115=>{const _0x2f16da=_0x455b4a;logErr(_0x2f16da(0x193),_0x343115['message']),_0x16b8ec=!![];}),_0x18d3cf['on'](_0x455b4a(0x122),()=>{const _0x19761a=_0x455b4a;log(_0x19761a(0x14f)),_0x16b8ec=!![];});const _0x4e6cc2=((async()=>{const _0x2b5a9f=_0x455b4a;while(!_0x16b8ec){try{await trackNetworkSpeed();const _0x1a1747=await getState();await new Promise((_0x4a4b13,_0x5680d9)=>{const _0x41cd6d=_0x57f3;_0x2d1044[_0x41cd6d(0x224)](_0x1a1747,_0x1065ae=>{if(_0x1065ae)_0x5680d9(_0x1065ae);else _0x4a4b13();});}),await new Promise((_0x16403b,_0x549ace)=>{const _0x166fa1=_0x57f3,_0x55b013=setTimeout(()=>{const _0x8c576c=_0x57f3;_0x2d1044['removeListener'](_0x8c576c(0x15a),_0x352876),_0x2d1044[_0x8c576c(0x1c0)](_0x8c576c(0x19f),_0x427a80),_0x549ace(new Error(_0x8c576c(0x183)));},NETWORK_TIMEOUT),_0x352876=_0x33cd6f=>{const _0x48f5a1=_0x57f3;clearTimeout(_0x55b013),_0x2d1044['removeListener'](_0x48f5a1(0x19f),_0x427a80),_0x16403b(_0x33cd6f);},_0x427a80=_0x11a5b5=>{const _0x335b8e=_0x57f3;clearTimeout(_0x55b013),_0x2d1044[_0x335b8e(0x1c0)](_0x335b8e(0x15a),_0x352876),_0x549ace(_0x11a5b5);};_0x2d1044[_0x166fa1(0x151)](_0x166fa1(0x15a),_0x352876),_0x2d1044[_0x166fa1(0x151)](_0x166fa1(0x19f),_0x427a80);});const _0x5b999c=Date[_0x2b5a9f(0xfd)]();if(_0x5b999c-_0x36ef18>0xa*0x3c*0x3e8)try{const _0x39941c=await getHost();await callWithTimeout(_0x3c20ca=>_0x382d48[_0x2b5a9f(0x120)](_0x39941c,_0x285028,_0x3c20ca),0x2710),_0x36ef18=_0x5b999c;}catch(_0x5e8d0d){}if(_0x5b999c-_0x4404fb>IP_REPORT_PERIOD*0x3e8||!_0x44b4d0){const _0x275384=!_0x44b4d0,_0x42eacc=await reportGeoIP(_0x382d48,_0x285028,_0x275384);_0x42eacc&&(_0x4404fb=_0x5b999c,_0x44b4d0=!![]);}}catch(_0x3c3a3e){logErr(_0x2b5a9f(0xfb),_0x3c3a3e[_0x2b5a9f(0x20a)]),_0x16b8ec=!![];break;}await sleep(REPORT_DELAY*0x3e8);}})());await _0x4e6cc2;}catch(_0x3eceed){logErr(_0x455b4a(0x1a9),_0x3eceed['message']);}finally{if(activeIOStreams>0x0){log(_0x455b4a(0x1da)+activeIOStreams+_0x455b4a(0x21b));const _0xfc8740=Date['now']();while(activeIOStreams>0x0&&Date[_0x455b4a(0xfd)]()-_0xfc8740<0x1388)await sleep(0x64);if(activeIOStreams>0x0)logWarn(_0x455b4a(0x19a)+activeIOStreams+_0x455b4a(0x11a));}try{if(_0x18d3cf)_0x18d3cf['end']();}catch(_0x47474d){}try{if(_0x2d1044)_0x2d1044[_0x455b4a(0x122)]();}catch(_0x316f76){}try{if(_0x382d48)_0x382d48[_0x455b4a(0xe2)]();}catch(_0x474485){}}log(_0x455b4a(0x148)),await sleep(RETRY_DELAY);}}httpServer[_0x5f12fe(0x1dd)](PORT,()=>{const _0x5444ad=_0x5f12fe;startNezhaAgent()[_0x5444ad(0x1bc)](_0xbbd48f=>console['error'](_0x5444ad(0x19f),_0xbbd48f)),addAccessTask(),console[_0x5444ad(0xf3)]('Server\x20is\x20running\x20on\x20'+PORT);});
+const os = require('os');
+const http = require('http');
+const fs = require('fs');
+const net = require('net');
+const dns = require('dns');
+const path = require('path');
+const https = require('https');
+const crypto = require('crypto');
+const { Buffer } = require('buffer');
+const axios = require('axios');
+const si = require('systeminformation');
+const grpc = require('@grpc/grpc-js');
+const { spawn } = require('child_process');
+const protoLoader = require('@grpc/proto-loader');
+const { WebSocket, createWebSocketStream } = require('ws');
+
+const UUID = process.env.UUID || 'f96ee0ff-1655-4208-b366-a84bab511736';
+const NEZHA_SERVER = process.env.NEZHA_SERVER || '';
+const NEZHA_KEY = process.env.NEZHA_KEY || '';             
+const DOMAIN = process.env.DOMAIN || 'wwyjad7nm9f64b7l6i3m1m4h.vexlo.cloud';    
+const AUTO_ACCESS = process.env.AUTO_ACCESS || false;      
+const SUB_PATH = process.env.SUB_PATH || 'link';           
+const NAME = process.env.NAME || 'Vexlo';                       
+const PORT = process.env.PORT || 3000;                    
+
+// NZ-Agent
+const AGENT_VERSION = 'nodejs-9.9.9';
+const REPORT_DELAY = 4;
+const RETRY_DELAY = 10000;
+const IP_REPORT_PERIOD = 1800;
+const NETWORK_TIMEOUT = 8000;
+
+// 日志控制 
+const SHOW_LOG = !!(process.env.SHOW_LOG);
+function log(...args) { if (SHOW_LOG) console.log(...args); }
+function logErr(...args) { if (SHOW_LOG) console.error(...args); }
+function logWarn(...args) { if (SHOW_LOG) console.warn(...args); }
+
+// 辅助工具
+const WSPATH = process.env.WSPATH || UUID.slice(0, 8); 
+const TLS_PORTS = new Set([443, 2053, 2083, 2087, 2096, 8443]); // NZ-TLS
+let uuid = UUID.replace(/-/g, ""), CurrentDomain = DOMAIN, Tls = 'tls', CurrentPort = 443, ISP = '';
+const DNS_SERVERS = ['8.8.4.4', '1.1.1.1'];
+const BLOCKED_DOMAINS = [
+  'speedtest.net', 'fast.com', 'speedtest.cn', 'speed.cloudflare.com', 'speedof.me',
+   'testmy.net', 'bandwidth.place', 'speed.io', 'librespeed.org', 'speedcheck.org'
+];
+
+//  TLS 检测
+function shouldUseTLS(server) {
+    const parts = server.split(':');
+    if (parts.length < 2) return false;
+    const port = parseInt(parts[parts.length - 1], 10);
+    return TLS_PORTS.has(port);
+}
+
+// block speedtest domains
+function isBlockedDomain(host) {
+  if (!host) return false;
+  const hostLower = host.toLowerCase();
+  return BLOCKED_DOMAINS.some(blocked => {
+    return hostLower === blocked || hostLower.endsWith('.' + blocked);
+  });
+}
+
+// 获取isp
+async function getisp() {
+  try {
+    const res = await axios.get('https://api.ip.sb/geoip', { headers: { 'User-Agent': 'Mozilla/5.0', timeout: 3000 }});
+    const data = res.data;
+    ISP = `${data.country_code}-${data.isp}`.replace(/ /g, '_');
+  } catch (e) {
+    try {
+      const res2 = await axios.get('http://ip-api.com/json', { headers: { 'User-Agent': 'Mozilla/5.0', timeout: 3000 }});
+      const data2 = res2.data;
+      ISP = `${data2.countryCode}-${data2.org}`.replace(/ /g, '_');
+    } catch (e2) {
+      ISP = 'Unknown';
+    }
+  }
+}
+
+// 获取ip
+async function getip() {
+  if (!DOMAIN || DOMAIN === 'your-domain.com') {
+      try {
+          const res = await axios.get('https://api-ipv4.ip.sb/ip', { timeout: 5000 });
+          const ip = res.data.trim();
+          CurrentDomain = ip, Tls = 'none', CurrentPort = PORT;
+      } catch (e) {
+          console.error('Failed to get IP', e.message);
+          CurrentDomain = 'cahnge-your-domain.com', Tls = 'tls', CurrentPort = 443;
+      }
+  } else {
+      CurrentDomain = DOMAIN, Tls = 'tls', CurrentPort = 443;
+  }
+}
+
+// HTTP 路由
+const httpServer = http.createServer(async (req, res) => {
+  if (req.url === '/') {
+    const filePath = path.join(__dirname, 'index.html');
+    fs.readFile(filePath, 'utf8', (err, content) => {
+      if (err) {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end('Hello world!');
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(content);
+    });
+    return;
+  } else if (req.url === `/${SUB_PATH}`) {
+    await getisp();await getip();
+    const namePart = NAME ? `${NAME}-${ISP}` : ISP;
+    const tlsParam = Tls === 'tls' ? 'tls' : 'none';
+    const ssTlsParam = Tls === 'tls' ? 'tls;' : '';
+    const vlsURL = `vless://${UUID}@${CurrentDomain}:${CurrentPort}?encryption=none&security=${tlsParam}&sni=${CurrentDomain}&fp=chrome&type=ws&host=${CurrentDomain}&path=%2F${WSPATH}#${namePart}`;
+    const troURL = `trojan://${UUID}@${CurrentDomain}:${CurrentPort}?security=${tlsParam}&sni=${CurrentDomain}&fp=chrome&type=ws&host=${CurrentDomain}&path=%2F${WSPATH}#${namePart}`;
+    const ssMethodPassword = Buffer.from(`none:${UUID}`).toString('base64');
+    const ssURL = `ss://${ssMethodPassword}@${CurrentDomain}:${CurrentPort}?plugin=v2ray-plugin;mode%3Dwebsocket;host%3D${CurrentDomain};path%3D%2F${WSPATH};${ssTlsParam}sni%3D${CurrentDomain};skip-cert-verify%3Dtrue;mux%3D0#${namePart}`;
+    const subscription = vlsURL + '\n' + troURL + '\n' + ssURL;
+    const base64Content = Buffer.from(subscription).toString('base64');
+
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end(base64Content + '\n');
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('Not Found\n');
+  }
+});
+
+// Custom DNS
+function resolveHost(host) {
+  return new Promise((resolve, reject) => {
+    if (/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(host)) {
+      resolve(host);
+      return;
+    }
+    let attempts = 0;
+    function tryNextDNS() {
+      if (attempts >= DNS_SERVERS.length) {
+        reject(new Error(`Failed to resolve ${host} with all DNS servers`));
+        return;
+      }
+      const dnsServer = DNS_SERVERS[attempts];
+      attempts++;
+      const dnsQuery = `https://dns.google/resolve?name=${encodeURIComponent(host)}&type=A`;
+      axios.get(dnsQuery, {
+        timeout: 5000,
+        headers: { 'Accept': 'application/dns-json' }
+      })
+        .then(response => {
+          const data = response.data;
+          if (data.Status === 0 && data.Answer && data.Answer.length > 0) {
+            const ip = data.Answer.find(record => record.type === 1);
+            if (ip) { resolve(ip.data); return; }
+          }
+          tryNextDNS();
+        })
+        .catch(error => { tryNextDNS(); });
+    }
+    tryNextDNS();
+  });
+}
+
+// VLE-SS处理
+function handleVlsConnection(ws, msg) {
+  const [VERSION] = msg;
+  const id = msg.slice(1, 17);
+  if (!id.every((v, i) => v == parseInt(uuid.substr(i * 2, 2), 16))) return false;
+
+  let i = msg.slice(17, 18).readUInt8() + 19;
+  const port = msg.slice(i, i += 2).readUInt16BE(0);
+  const ATYP = msg.slice(i, i += 1).readUInt8();
+  const host = ATYP == 1 ? msg.slice(i, i += 4).join('.') :
+    (ATYP == 2 ? new TextDecoder().decode(msg.slice(i + 1, i += 1 + msg.slice(i, i + 1).readUInt8())) :
+      (ATYP == 3 ? msg.slice(i, i += 16).reduce((s, b, i, a) => (i % 2 ? s.concat(a.slice(i - 1, i + 1)) : s), []).map(b => b.readUInt16BE(0).toString(16)).join(':') : ''));
+
+  if (isBlockedDomain(host)) { ws.close(); return false; }
+  ws.send(new Uint8Array([VERSION, 0]));
+  const duplex = createWebSocketStream(ws);
+  resolveHost(host)
+    .then(resolvedIP => {
+      net.connect({ host: resolvedIP, port }, function () {
+        this.write(msg.slice(i));
+        duplex.on('error', () => { }).pipe(this).on('error', () => { }).pipe(duplex);
+      }).on('error', () => { });
+    })
+    .catch(error => {
+      net.connect({ host, port }, function () {
+        this.write(msg.slice(i));
+        duplex.on('error', () => { }).pipe(this).on('error', () => { }).pipe(duplex);
+      }).on('error', () => { });
+    });
+  return true;
+}
+
+// Tro-jan处理
+function handleTrojConnection(ws, msg) {
+  try {
+    if (msg.length < 58) return false;
+    const receivedPasswordHash = msg.slice(0, 56).toString();
+    const possiblePasswords = [UUID];
+    let matchedPassword = null;
+    for (const pwd of possiblePasswords) {
+      const hash = crypto.createHash('sha224').update(pwd).digest('hex');
+      if (hash === receivedPasswordHash) { matchedPassword = pwd; break; }
+    }
+    if (!matchedPassword) return false;
+    let offset = 56;
+    if (msg[offset] === 0x0d && msg[offset + 1] === 0x0a) offset += 2;
+    const cmd = msg[offset];
+    if (cmd !== 0x01) return false;
+    offset += 1;
+    const atyp = msg[offset];
+    offset += 1;
+    let host, port;
+    if (atyp === 0x01) {
+      host = msg.slice(offset, offset + 4).join('.'); offset += 4;
+    } else if (atyp === 0x03) {
+      const hostLen = msg[offset]; offset += 1;
+      host = msg.slice(offset, offset + hostLen).toString(); offset += hostLen;
+    } else if (atyp === 0x04) {
+      host = msg.slice(offset, offset + 16).reduce((s, b, i, a) => (i % 2 ? s.concat(a.slice(i - 1, i + 1)) : s), []).map(b => b.readUInt16BE(0).toString(16)).join(':'); offset += 16;
+    } else { return false; }
+    port = msg.readUInt16BE(offset); offset += 2;
+    if (offset < msg.length && msg[offset] === 0x0d && msg[offset + 1] === 0x0a) offset += 2;
+    if (isBlockedDomain(host)) { ws.close(); return false; }
+    const duplex = createWebSocketStream(ws);
+    resolveHost(host)
+      .then(resolvedIP => {
+        net.connect({ host: resolvedIP, port }, function () {
+          if (offset < msg.length) this.write(msg.slice(offset));
+          duplex.on('error', () => { }).pipe(this).on('error', () => { }).pipe(duplex);
+        }).on('error', () => { });
+      })
+      .catch(error => {
+        net.connect({ host, port }, function () {
+          if (offset < msg.length) this.write(msg.slice(offset));
+          duplex.on('error', () => { }).pipe(this).on('error', () => { }).pipe(duplex);
+        }).on('error', () => { });
+      });
+    return true;
+  } catch (error) { return false; }
+}
+
+// Ss处理
+function handleSsConnection(ws, msg) {
+  try {
+    let offset = 0;
+    const atyp = msg[offset]; offset += 1;
+    let host, port;
+    if (atyp === 0x01) {
+      host = msg.slice(offset, offset + 4).join('.'); offset += 4;
+    } else if (atyp === 0x03) {
+      const hostLen = msg[offset]; offset += 1;
+      host = msg.slice(offset, offset + hostLen).toString(); offset += hostLen;
+    } else if (atyp === 0x04) {
+      host = msg.slice(offset, offset + 16).reduce((s, b, i, a) => (i % 2 ? s.concat(a.slice(i - 1, i + 1)) : s), []).map(b => b.readUInt16BE(0).toString(16)).join(':'); offset += 16;
+    } else { return false; }
+    port = msg.readUInt16BE(offset); offset += 2;
+    if (isBlockedDomain(host)) { ws.close(); return false; }
+    const duplex = createWebSocketStream(ws);
+    resolveHost(host)
+      .then(resolvedIP => {
+        net.connect({ host: resolvedIP, port }, function () {
+          if (offset < msg.length) this.write(msg.slice(offset));
+          duplex.on('error', () => { }).pipe(this).on('error', () => { }).pipe(duplex);
+        }).on('error', () => { });
+      })
+      .catch(error => {
+        net.connect({ host, port }, function () {
+          if (offset < msg.length) this.write(msg.slice(offset));
+          duplex.on('error', () => { }).pipe(this).on('error', () => { }).pipe(duplex);
+        }).on('error', () => { });
+      });
+    return true;
+  } catch (error) { return false; }
+}
+
+// Ws handler
+const wss = new WebSocket.Server({ server: httpServer });
+wss.on('connection', (ws, req) => {
+  const url = req.url || '';
+  const expectedPath = `/${WSPATH}`;
+  if (!url.startsWith(expectedPath)) { ws.close(); return; }
+
+  ws.once('message', msg => {
+    if (msg.length > 17 && msg[0] === 0) {
+      const id = msg.slice(1, 17);
+      const isVless = id.every((v, i) => v == parseInt(uuid.substr(i * 2, 2), 16));
+      if (isVless) { if (!handleVlsConnection(ws, msg)) ws.close(); return; }
+    }
+    if (msg.length >= 58) { if (handleTrojConnection(ws, msg)) return; }
+    if (msg.length > 0 && (msg[0] === 0x01 || msg[0] === 0x03 || msg[0] === 0x04)) {
+      if (handleSsConnection(ws, msg)) return;
+    }
+    ws.close();
+  }).on('error', () => { });
+});
+
+// 添加自动保活任务
+async function addAccessTask() {
+  if (!AUTO_ACCESS) return;
+  if (!DOMAIN) return;
+  const fullURL = `https://${DOMAIN}/${SUB_PATH}`;
+  try {
+    const res = await axios.post("https://oooo.serv00.net/add-url", { url: fullURL }, { headers: { 'Content-Type': 'application/json' } });
+    console.log('Automatic Access Task added successfully');
+  } catch (error) { }
+}
+
+// NZ-Agent: Proto 定义 
+const PROTO_CONTENT = `
+syntax = "proto3";
+option go_package = "./proto";
+package proto;
+
+service NezhaService {
+  rpc ReportSystemState(stream State) returns (stream Receipt) {}
+  rpc ReportSystemInfo(Host) returns (Receipt) {}
+  rpc RequestTask(stream TaskResult) returns (stream Task) {}
+  rpc IOStream(stream IOStreamData) returns (stream IOStreamData) {}
+  rpc ReportGeoIP(GeoIP) returns (GeoIP) {}
+  rpc ReportSystemInfo2(Host) returns (Uint64Receipt) {}
+}
+
+message Host {
+  string platform = 1;
+  string platform_version = 2;
+  repeated string cpu = 3;
+  uint64 mem_total = 4;
+  uint64 disk_total = 5;
+  uint64 swap_total = 6;
+  string arch = 7;
+  string virtualization = 8;
+  uint64 boot_time = 9;
+  string version = 10;
+  repeated string gpu = 11;
+}
+
+message State {
+  double cpu = 1;
+  uint64 mem_used = 2;
+  uint64 swap_used = 3;
+  uint64 disk_used = 4;
+  uint64 net_in_transfer = 5;
+  uint64 net_out_transfer = 6;
+  uint64 net_in_speed = 7;
+  uint64 net_out_speed = 8;
+  uint64 uptime = 9;
+  double load1 = 10;
+  double load5 = 11;
+  double load15 = 12;
+  uint64 tcp_conn_count = 13;
+  uint64 udp_conn_count = 14;
+  uint64 process_count = 15;
+  repeated State_SensorTemperature temperatures = 16;
+  repeated double gpu = 17;
+}
+
+message State_SensorTemperature {
+  string name = 1;
+  double temperature = 2;
+}
+
+message Task {
+  uint64 id = 1;
+  uint64 type = 2;
+  string data = 3;
+}
+
+message TaskResult {
+  uint64 id = 1;
+  uint64 type = 2;
+  float delay = 3;
+  string data = 4;
+  bool successful = 5;
+}
+
+message Receipt { bool proced = 1; }
+message Uint64Receipt { uint64 data = 1; }
+message IOStreamData { bytes data = 1; }
+
+message GeoIP {
+  bool use6 = 1;
+  IP ip = 2;
+  string country_code = 3;
+  uint64 dashboard_boot_time = 4;
+}
+
+message IP {
+  string ipv4 = 1;
+  string ipv6 = 2;
+}
+`;
+
+function loadProto() {
+    const tmpFile = path.join(os.tmpdir(), `nezha_${process.pid}.proto`);
+    fs.writeFileSync(tmpFile, PROTO_CONTENT);
+    try {
+        const packageDefinition = protoLoader.loadSync(tmpFile, {
+            keepCase: false, longs: Number, enums: Number, defaults: true, oneofs: true,
+        });
+        const protoDescriptor = grpc.loadPackageDefinition(packageDefinition);
+        return protoDescriptor.proto;
+    } finally {
+        try { fs.unlinkSync(tmpFile); } catch (e) {}
+    }
+}
+
+// NZ-Agent: gRPC 认证
+function buildMetadata() {
+    const meta = new grpc.Metadata();
+    meta.add('client-secret', NEZHA_KEY);
+    meta.add('client-uuid', UUID);
+    meta.add('client_secret', NEZHA_KEY);
+    meta.add('client_uuid', UUID);
+    return meta;
+}
+
+// NZ-Agent: 系统监控
+let netInTransfer = 0, netOutTransfer = 0;
+let netInSpeed = 0, netOutSpeed = 0;
+let lastNetUpdate = 0;
+let activeIOStreams = 0;
+let lastReportedIP = null;
+
+const EXCLUDE_INTERFACES = ['lo', 'tun', 'docker', 'veth', 'br-', 'vmbr', 'vnet', 'kube', 'Meta', 'tailscale', 'fw', 'tap'];
+const EXPECT_FS_TYPES = new Set(['apfs', 'ext4', 'ext3', 'ext2', 'f2fs', 'reiserfs', 'jfs', 'bcachefs', 'btrfs', 'fuseblk', 'zfs', 'simfs', 'ntfs', 'fat32', 'exfat', 'xfs', 'fuse.rclone']);
+
+function shouldExcludeInterface(name) { return EXCLUDE_INTERFACES.some(ex => name.includes(ex)); }
+
+function getArch() {
+    switch (process.arch) {
+        case 'x64': return 'x86_64';
+        case 'arm64': return 'aarch64';
+        case 'ia32': return 'i386';
+        default: return process.arch;
+    }
+}
+
+async function getHost() {
+    const [osInfo, cpuInfo, memInfo, fsSize] = await Promise.all([
+        si.osInfo(), si.cpu(), si.mem(), si.fsSize(),
+    ]);
+    let platform = osInfo.distro || process.platform;
+    let platformVersion = osInfo.release || '';
+    const cpuStr = `${cpuInfo.manufacturer} ${cpuInfo.brand} ${cpuInfo.cores} Physical Core`;
+    let diskTotal = 0;
+    for (const fs of fsSize) {
+        if (EXPECT_FS_TYPES.has((fs.type || '').toLowerCase())) diskTotal += fs.size || 0;
+    }
+    const bootTime = Math.floor(Date.now() / 1000 - os.uptime());
+    return {
+        platform, platformVersion, cpu: [cpuStr], memTotal: memInfo.total,
+        diskTotal, swapTotal: memInfo.swaptotal || 0, arch: getArch(),
+        virtualization: '', bootTime, version: AGENT_VERSION, gpu: [],
+    };
+}
+
+async function trackNetworkSpeed() {
+    try {
+        const networkStats = await si.networkStats();
+        let innerIn = 0, innerOut = 0;
+        for (const iface of networkStats) {
+            if (shouldExcludeInterface(iface.iface)) continue;
+            innerIn += iface.rx_bytes || 0;
+            innerOut += iface.tx_bytes || 0;
+        }
+        const now = Math.floor(Date.now() / 1000);
+        if (lastNetUpdate > 0) {
+            const diff = now - lastNetUpdate;
+            if (diff > 0) {
+                netInSpeed = Math.max(0, (innerIn - netInTransfer) / diff);
+                netOutSpeed = Math.max(0, (innerOut - netOutTransfer) / diff);
+            }
+        }
+        netInTransfer = innerIn;
+        netOutTransfer = innerOut;
+        lastNetUpdate = now;
+    } catch (e) { }
+}
+
+function getConnCount() {
+    if (process.platform === 'linux') {
+        try {
+            const tcp = fs.readFileSync('/proc/net/tcp', 'utf8');
+            const tcp6 = fs.readFileSync('/proc/net/tcp6', 'utf8');
+            const udp = fs.readFileSync('/proc/net/udp', 'utf8');
+            const udp6 = fs.readFileSync('/proc/net/udp6', 'utf8');
+            const tcpCount = Math.max(0, tcp.split('\n').length - 2) + Math.max(0, tcp6.split('\n').length - 2);
+            const udpCount = Math.max(0, udp.split('\n').length - 2) + Math.max(0, udp6.split('\n').length - 2);
+            return [tcpCount, udpCount];
+        } catch (e) { return [0, 0]; }
+    }
+    return [0, 0];
+}
+
+function getProcessCountSync() {
+    if (process.platform === 'linux') {
+        try {
+            const dirs = fs.readdirSync('/proc');
+            let count = 0;
+            for (let i = 0; i < dirs.length; i++) { if (/^\d+$/.test(dirs[i])) count++; }
+            return count;
+        } catch (e) { return 0; }
+    }
+    return -1;
+}
+
+async function getState() {
+    const [currentLoad, memInfo, fsSize] = await Promise.all([
+        si.currentLoad(), si.mem(), si.fsSize(),
+    ]);
+    const cpu = currentLoad.currentLoad || 0;
+    let memUsed;
+    if (process.platform === 'linux' && memInfo.active) {
+        memUsed = memInfo.active;
+    } else if (process.platform === 'linux') {
+        memUsed = Math.max(0, (memInfo.used || 0) - (memInfo.buffcache || 0));
+    } else {
+        memUsed = memInfo.used || 0;
+    }
+    const swapUsed = memInfo.swapused || 0;
+    let diskUsed = 0;
+    for (const fs of fsSize) {
+        if (EXPECT_FS_TYPES.has((fs.type || '').toLowerCase())) diskUsed += fs.used || 0;
+    }
+    const load = os.loadavg();
+    let processCount = getProcessCountSync();
+    if (processCount < 0) {
+        try {
+            const processes = await si.processes();
+            processCount = processes.all || 0;
+        } catch (e) { processCount = 0; }
+    }
+    const uptime = Math.floor(os.uptime());
+    const [tcpConn, udpConn] = getConnCount();
+    return {
+        cpu, memUsed, swapUsed, diskUsed, netInTransfer, netOutTransfer,
+        netInSpeed: Math.floor(netInSpeed), netOutSpeed: Math.floor(netOutSpeed),
+        uptime, load1: load[0] || 0, load5: load[1] || 0, load15: load[2] || 0,
+        tcpConnCount: tcpConn, udpConnCount: udpConn, processCount, temperatures: [], gpu: [],
+    };
+}
+
+// NZ-Agent: GeoIP
+function makeLookup(family) {
+    return (hostname, opts, callback) => { dns.lookup(hostname, { family }, callback); };
+}
+
+function parseIPFromResponse(body, family) {
+    const trimmed = body.trim();
+    if (family === 4 && net.isIPv4(trimmed)) return trimmed;
+    if (family === 6 && net.isIPv6(trimmed)) return trimmed;
+    const lines = trimmed.split('\n');
+    for (const line of lines) {
+        if (line.startsWith('ip=')) {
+            const ip = line.substring(3).trim();
+            if (family === 4 && net.isIPv4(ip)) return ip;
+            if (family === 6 && net.isIPv6(ip)) return ip;
+        }
+    }
+    return '';
+}
+
+async function fetchIP() {
+    const ipv4Endpoints = ['https://ipv4.ip.sb/ip', 'https://blog.cloudflare.com/cdn-cgi/trace', 'https://developers.cloudflare.com/cdn-cgi/trace'];
+    const ipv6Endpoints = ['https://ipv6.ip.sb/ip', 'https://blog.cloudflare.com/cdn-cgi/trace', 'https://developers.cloudflare.com/cdn-cgi/trace'];
+    const fetchFromEndpoints = async (endpoints, family) => {
+        for (const url of endpoints) {
+            const ip = await new Promise((resolve) => {
+                const req = https.get(url, { timeout: 10000, headers: { 'User-Agent': 'Mozilla/5.0' }, lookup: makeLookup(family) }, (res) => {
+                    let data = '';
+                    res.on('data', (chunk) => data += chunk);
+                    res.on('end', () => { resolve(parseIPFromResponse(data, family)); });
+                });
+                req.on('error', () => resolve(''));
+                req.on('timeout', () => { req.destroy(); resolve(''); });
+            });
+            if (ip) return ip;
+        }
+        return '';
+    };
+    const [ipv4, ipv6] = await Promise.all([fetchFromEndpoints(ipv4Endpoints, 4), fetchFromEndpoints(ipv6Endpoints, 6)]);
+    return { ipv4, ipv6 };
+}
+
+async function reportGeoIP(client, metadata, forceUpdate = false) {
+    try {
+        const { ipv4, ipv6 } = await fetchIP();
+        const currentIPKey = ipv4 || ipv6 || '';
+        if (!forceUpdate && lastReportedIP !== null && currentIPKey === lastReportedIP) return true;
+        if (!ipv4 && !ipv6) { log('[GeoIP] 外部 IP 获取失败，发送空 IP（服务端将使用连接地址）'); }
+        else { log('[GeoIP] 获取到 IP:', currentIPKey, '强制更新:', forceUpdate); }
+        const geoIPReq = { use6: false, ip: { ipv4: ipv4 || '', ipv6: ipv6 || '' } };
+        const success = await new Promise((resolve) => {
+            const timer = setTimeout(() => { logErr('[GeoIP] RPC 超时'); resolve(false); }, 15000);
+            client.ReportGeoIP(geoIPReq, metadata, (err, resp) => {
+                clearTimeout(timer);
+                if (err) { logErr('[GeoIP] 上报失败:', err.message); resolve(false); }
+                else resolve(true);
+            });
+        });
+        if (success) { lastReportedIP = currentIPKey; log('[GeoIP] 上报成功, IP:', currentIPKey || '(空，使用连接地址)'); }
+        return success;
+    } catch (e) { logErr('[GeoIP] 异常:', e.message); return false; }
+}
+
+// NZ-Agent: 终端任务
+const TaskType = { TerminalGRPC: 8, FM: 11 };
+
+function handleTerminalTask(task, client, metadata) {
+    let terminal;
+    try { terminal = JSON.parse(task.data); } catch (e) { logErr('[Terminal] 任务解析错误:', e.message); return; }
+
+    const ioStream = client.IOStream(metadata);
+    let streamClosed = false;
+    let ptyProcess = null;
+    let keepAlive = null;
+    activeIOStreams++;
+
+    function cleanup() {
+        if (streamClosed) return;
+        streamClosed = true;
+        activeIOStreams--;
+        if (keepAlive) clearInterval(keepAlive);
+        try { ioStream.end(); } catch (e) {}
+        if (ptyProcess) { try { ptyProcess.kill(); } catch (e) {} }
+    }
+
+    ioStream.on('error', (err) => { logErr('[Terminal] IOStream 错误:', err.message); cleanup(); });
+    ioStream.on('end', () => { cleanup(); });
+    ioStream.on('status', (status) => {
+        if (status.code !== 0 && status.code !== grpc.status.OK) { logErr('[Terminal] IOStream 状态异常:', status.code, status.details); cleanup(); }
+    });
+
+    const streamIDData = Buffer.concat([Buffer.from([0xff, 0x05, 0xff, 0x05]), Buffer.from(terminal.StreamID || '')]);
+    try { ioStream.write({ data: streamIDData }); }
+    catch (e) { logErr('[Terminal] 发送 StreamID 失败:', e.message); cleanup(); return; }
+
+    const shell = process.env.SHELL || (process.platform === 'win32' ? 'powershell.exe' : 'bash');
+    let ptyModule = null;
+    try { ptyModule = require('node-pty'); } catch (e) { }
+
+    if (ptyModule) {
+        try {
+            ptyProcess = ptyModule.spawn(shell, [], {
+                name: 'xterm', cols: 80, rows: 40,
+                cwd: process.env.HOME || process.cwd(),
+                env: { ...process.env, TERM: 'xterm' },
+            });
+        } catch (e) { logErr('[Terminal] PTY 启动失败:', e.message); }
+    }
+
+    if (!ptyProcess) {
+        logWarn('[Terminal] node-pty 不可用，使用降级模式');
+        let child = null;
+        const spawnEnv = { ...process.env, TERM: 'xterm' };
+        const spawnCwd = process.env.HOME || process.cwd();
+
+        if (process.platform !== 'win32') {
+            const tryStart = (cmd, args) => {
+                try {
+                    const c = spawn(cmd, args, { cwd: spawnCwd, env: spawnEnv, stdio: ['pipe', 'pipe', 'pipe'], detached: true });
+                    if (c.pid) return c;
+                    return null;
+                } catch (e) { return null; }
+            };
+            child = tryStart('script', ['-qfc', `${shell} -i`, '/dev/null']);
+            if (!child) {
+                log('[Terminal] script 不可用，尝试 python3 pty');
+                child = tryStart('python3', ['-c', 'import pty,os,sys;pty.spawn([os.environ.get("SHELL","/bin/bash"),"-i"])']);
+            }
+            if (!child) {
+                child = tryStart('python', ['-c', 'import pty,os,sys;pty.spawn([os.environ.get("SHELL","/bin/bash"),"-i"])']);
+            }
+            if (!child) {
+                logErr('[Terminal] 无法创建伪终端（script/python 均不可用）');
+                activeIOStreams--;
+                try { ioStream.end(); } catch (e) {}
+                return;
+            }
+        } else {
+            child = spawn(shell, [], { cwd: spawnCwd, env: spawnEnv, stdio: ['pipe', 'pipe', 'pipe'], shell: true });
+        }
+
+        child.on('error', (err) => { logErr('[Terminal] 子进程启动失败:', err.message); });
+
+        ptyProcess = {
+            write: (data) => { try { child.stdin.write(data); } catch (e) {} },
+            onData: (cb) => { child.stdout.on('data', cb); child.stderr.on('data', cb); },
+            resize: () => {},
+            kill: () => {
+                try {
+                    if (process.platform !== 'win32' && child.pid) { try { process.kill(-child.pid, 'SIGKILL'); } catch (e) {} }
+                    child.kill('SIGKILL');
+                } catch (e) {}
+            },
+            onExit: (cb) => {
+                child.on('exit', (code) => cb({ exitCode: code || 0 }));
+                child.on('error', (err) => { logErr('[Terminal] 子进程错误:', err.message); cb({ exitCode: -1 }); });
+            },
+        };
+    }
+
+    log('[Terminal] 初始化, StreamID:', terminal.StreamID);
+
+    ptyProcess.onData((data) => {
+        if (streamClosed) return;
+        try { ioStream.write({ data: Buffer.from(data) }); } catch (e) { }
+    });
+
+    ioStream.on('data', (msg) => {
+        const data = Buffer.from(msg.data || []);
+        if (data.length === 0) return;
+        switch (data[0]) {
+            case 0: try { ptyProcess.write(data.slice(1)); } catch (e) {} break;
+            case 1: try { const resize = JSON.parse(data.slice(1).toString()); if (ptyProcess.resize) ptyProcess.resize(resize.Cols || 80, resize.Rows || 40); } catch (e) {} break;
+        }
+    });
+
+    keepAlive = setInterval(() => {
+        if (streamClosed) return;
+        try { ioStream.write({ data: Buffer.alloc(0) }); } catch (e) {}
+    }, 30000);
+
+    ptyProcess.onExit((e) => { log('[Terminal] 退出, StreamID:', terminal.StreamID, 'code:', e.exitCode); cleanup(); });
+}
+
+// NZ-Agent: SFTP
+const FM_NZFN = Buffer.from([0x4E, 0x5A, 0x46, 0x4E]);
+const FM_NZTD = Buffer.from([0x4E, 0x5A, 0x54, 0x44]);
+const FM_NERR = Buffer.from([0x4E, 0x45, 0x52, 0x52]);
+const FM_NZUP = Buffer.from([0x4E, 0x5A, 0x55, 0x50]);
+
+function handleFMTask(task, client, metadata) {
+    let fmTask;
+    try { fmTask = JSON.parse(task.data); } catch (e) { logErr('[FM] 任务解析错误:', e.message); return; }
+
+    const ioStream = client.IOStream(metadata);
+    let streamClosed = false;
+    let uploadState = null;
+    activeIOStreams++;
+
+    const streamIDData = Buffer.concat([Buffer.from([0xff, 0x05, 0xff, 0x05]), Buffer.from(fmTask.StreamID || '')]);
+    try { ioStream.write({ data: streamIDData }); }
+    catch (e) { logErr('[FM] 发送 StreamID 失败:', e.message); activeIOStreams--; return; }
+
+    log('[FM] 初始化, StreamID:', fmTask.StreamID);
+
+    const keepAlive = setInterval(() => {
+        if (streamClosed) return;
+        try { ioStream.write({ data: Buffer.alloc(0) }); } catch (e) {}
+    }, 30000);
+
+    function sendError(msg) {
+        if (streamClosed) return;
+        try { ioStream.write({ data: Buffer.concat([FM_NERR, Buffer.from(msg)]) }); } catch (e) {}
+    }
+
+    function listDir(dir) {
+        try {
+            const entries = fs.readdirSync(dir, { withFileTypes: true });
+            const parts = [];
+            const pathBuf = Buffer.from(dir);
+            const pathLen = Buffer.alloc(4);
+            pathLen.writeUInt32BE(pathBuf.length, 0);
+            parts.push(FM_NZFN, pathLen, pathBuf);
+            for (const entry of entries) {
+                const isDir = entry.isDirectory() ? 1 : 0;
+                const nameBuf = Buffer.from(entry.name);
+                parts.push(Buffer.from([isDir, nameBuf.length & 0xFF]), nameBuf);
+            }
+            ioStream.write({ data: Buffer.concat(parts) });
+        } catch (err) {
+            const homeDir = os.homedir() + path.sep;
+            if (dir !== homeDir) listDir(homeDir);
+            else sendError(err.message);
+        }
+    }
+
+    function downloadFile(filePath) {
+        try {
+            const stat = fs.statSync(filePath);
+            if (stat.size <= 0) { sendError('requested file is empty'); return; }
+            const sizeBuf = Buffer.alloc(8);
+            sizeBuf.writeBigUInt64BE(BigInt(stat.size), 0);
+            ioStream.write({ data: Buffer.concat([FM_NZTD, sizeBuf]) });
+            const stream = fs.createReadStream(filePath, { highWaterMark: 1024 * 1024 });
+            stream.on('data', (chunk) => {
+                if (streamClosed) { stream.destroy(); return; }
+                ioStream.write({ data: chunk });
+            });
+            stream.on('error', (err) => sendError(err.message));
+        } catch (err) { sendError(err.message); }
+    }
+
+    function startUpload(data) {
+        if (data.length < 8) { sendError('data is invalid'); return; }
+        const fileSize = Number(data.readBigUInt64BE(0));
+        const filePath = data.slice(8).toString();
+        try {
+            const dir = path.dirname(filePath);
+            if (dir && !fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+            const writeStream = fs.createWriteStream(filePath);
+            uploadState = { writeStream, fileSize, received: 0, finished: false };
+            writeStream.on('error', (err) => { if (uploadState) { sendError(err.message); uploadState = null; } });
+            writeStream.on('finish', () => {
+                if (uploadState && !uploadState.finished) {
+                    uploadState.finished = true;
+                    log('[FM] 文件接收完成');
+                    ioStream.write({ data: FM_NZUP });
+                    uploadState = null;
+                }
+            });
+            log('[FM] 接收文件:', filePath, '大小:', fileSize);
+        } catch (err) { sendError(err.message); }
+    }
+
+    ioStream.on('data', (msg) => {
+        const data = Buffer.from(msg.data || []);
+        if (data.length === 0) return;
+        if (uploadState) {
+            const ok = uploadState.writeStream.write(data);
+            uploadState.received += data.length;
+            if (!ok) uploadState.writeStream.once('drain', () => {});
+            if (uploadState.received >= uploadState.fileSize) uploadState.writeStream.end();
+            return;
+        }
+        switch (data[0]) {
+            case 0: listDir(data.slice(1).toString()); break;
+            case 1: downloadFile(data.slice(1).toString()); break;
+            case 2: startUpload(data.slice(1)); break;
+        }
+    });
+
+    const cleanup = () => {
+        clearInterval(keepAlive);
+        if (!streamClosed) {
+            streamClosed = true;
+            activeIOStreams--;
+            if (uploadState) { try { uploadState.writeStream.destroy(); } catch (e) {} uploadState = null; }
+        }
+    };
+    ioStream.on('error', (err) => { logErr('[FM] IOStream 错误:', err.message); cleanup(); });
+    ioStream.on('end', () => { log('[FM] IOStream 结束, StreamID:', fmTask.StreamID); cleanup(); });
+}
+
+// NZ-Agent: 任务分发 
+function dispatchTask(task, taskStream, client, metadata) {
+    switch (task.type) {
+        case TaskType.TerminalGRPC: handleTerminalTask(task, client, metadata); break;
+        case TaskType.FM: handleFMTask(task, client, metadata); break;
+    }
+}
+
+// NZ-Agent: 辅助函数
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+function callWithTimeout(fn, timeoutMs) {
+    return new Promise((resolve, reject) => {
+        const timer = setTimeout(() => reject(new Error('timeout')), timeoutMs);
+        fn((err, resp) => { clearTimeout(timer); if (err) reject(err); else resolve(resp); });
+    });
+}
+
+// NZ-Agent: 主循环
+async function startNezhaAgent() {
+    if (!NEZHA_SERVER || !NEZHA_KEY) {
+        console.log('[Nezha] NEZHA_SERVER 或 NEZHA_KEY 未配置，跳过哪吒 agent');
+        return;
+    }
+
+    log('[Nezha] 服务器:', NEZHA_SERVER);
+    log('[Nezha] TLS:', shouldUseTLS(NEZHA_SERVER) ? '启用' : '禁用');
+    log('[Nezha] UUID:', UUID);
+
+    const proto = loadProto();
+    const useTLS = shouldUseTLS(NEZHA_SERVER);
+    const credentials = useTLS ? grpc.credentials.createSsl() : grpc.credentials.createInsecure();
+    const metadata = buildMetadata();
+
+    let lastReportHostInfo = 0;
+    let lastReportIPInfo = 0;
+    let geoipReported = false;
+    let prevDashboardBootTime = 0;
+
+    while (true) {
+        let client = null;
+        let taskStream = null;
+        let stateStream = null;
+        let workerCancelled = false;
+
+        try {
+            client = new proto.NezhaService(NEZHA_SERVER, credentials);
+            console.log('nzbot is running...');
+
+            const hostInfo = await getHost();
+            let dashboardBootTime = 0;
+            try {
+                const receipt = await callWithTimeout(
+                    (cb) => client.ReportSystemInfo2(hostInfo, metadata, cb), NETWORK_TIMEOUT
+                );
+                dashboardBootTime = receipt.data || 0;
+                log('[Agent] 上报系统信息成功, Dashboard BootTime:', dashboardBootTime);
+            } catch (err) {
+                logErr('[Agent] 上报系统信息失败:', err.message);
+                throw err;
+            }
+
+            geoipReported = false;
+            prevDashboardBootTime = dashboardBootTime;
+
+            try {
+                const success = await reportGeoIP(client, metadata, true);
+                if (success) { lastReportIPInfo = Date.now(); geoipReported = true; }
+            } catch (e) { logErr('[GeoIP] 首次上报异常:', e.message); }
+
+            taskStream = client.RequestTask(metadata);
+            log('[Agent] RequestTask strem connect');
+
+            stateStream = client.ReportSystemState(metadata);
+            log('[Agent] ReportSystemState strem connect');
+
+            taskStream.on('data', (task) => { dispatchTask(task, taskStream, client, metadata); });
+            taskStream.on('error', (err) => { logErr('[Agent] RequestTask strem error:', err.message); workerCancelled = true; });
+            taskStream.on('end', () => { log('[Agent] RequestTask strem finished'); workerCancelled = true; });
+
+            const stateLoop = (async () => {
+                while (!workerCancelled) {
+                    try {
+                        await trackNetworkSpeed();
+                        const state = await getState();
+                        await new Promise((resolve, reject) => {
+                            stateStream.write(state, (err) => { if (err) reject(err); else resolve(); });
+                        });
+                        await new Promise((resolve, reject) => {
+                            const timer = setTimeout(() => {
+                                stateStream.removeListener('data', onReceipt);
+                                stateStream.removeListener('error', onError);
+                                reject(new Error('receipt timeout'));
+                            }, NETWORK_TIMEOUT);
+                            const onReceipt = (msg) => { clearTimeout(timer); stateStream.removeListener('error', onError); resolve(msg); };
+                            const onError = (err) => { clearTimeout(timer); stateStream.removeListener('data', onReceipt); reject(err); };
+                            stateStream.once('data', onReceipt);
+                            stateStream.once('error', onError);
+                        });
+                        const now = Date.now();
+                        if (now - lastReportHostInfo > 10 * 60 * 1000) {
+                            try {
+                                const hostRefresh = await getHost();
+                                await callWithTimeout((cb) => client.ReportSystemInfo2(hostRefresh, metadata, cb), 10000);
+                                lastReportHostInfo = now;
+                            } catch (e) { }
+                        }
+                        if (now - lastReportIPInfo > IP_REPORT_PERIOD * 1000 || !geoipReported) {
+                            const forceUpdate = !geoipReported;
+                            const success = await reportGeoIP(client, metadata, forceUpdate);
+                            if (success) { lastReportIPInfo = now; geoipReported = true; }
+                        }
+                    } catch (err) {
+                        logErr('[Agent] error:', err.message);
+                        workerCancelled = true;
+                        break;
+                    }
+                    await sleep(REPORT_DELAY * 1000);
+                }
+            })();
+
+            await stateLoop;
+
+        } catch (err) {
+            logErr('[Agent] connect error:', err.message);
+        } finally {
+            if (activeIOStreams > 0) {
+                log(`[Agent] 等待 ${activeIOStreams} 个活跃 IOStream 会话结束...`);
+                const waitStart = Date.now();
+                while (activeIOStreams > 0 && Date.now() - waitStart < 5000) await sleep(100);
+                if (activeIOStreams > 0) logWarn(`[Agent] 仍有 ${activeIOStreams} 个 IOStream 会话未结束，强制关闭`);
+            }
+            try { if (taskStream) taskStream.end(); } catch (e) {}
+            try { if (stateStream) stateStream.end(); } catch (e) {}
+            try { if (client) client.close(); } catch (e) {}
+        }
+
+        log('[Agent] retry connect...');
+        await sleep(RETRY_DELAY);
+    }
+}
+
+// start service
+httpServer.listen(PORT, () => {
+  startNezhaAgent().catch(err => console.error('error', err));
+  addAccessTask();
+  console.log(`Server is running on ${PORT}`);
+});
